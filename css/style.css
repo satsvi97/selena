@@ -186,3 +186,59 @@ body::after {
         display: none; 
     }
 }
+
+/* ========================================================= */
+/* ====== СТИЛИ ДЛЯ КАРУСЕЛИ (SWIPER) ====== */
+/* ========================================================= */
+
+.swiper {
+    width: 100%;
+    max-width: 800px;
+    margin: 30px auto 60px auto;
+    padding-bottom: 40px; /* Место для точек */
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid rgba(180, 170, 255, 0.4);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6), 0 0 15px rgba(180, 170, 255, 0.2);
+}
+
+/* Перекрашиваем стрелки Swiper в фиолетовый */
+.swiper-button-next, .swiper-button-prev {
+    color: #b8b8ff !important;
+    filter: drop-shadow(0 0 5px rgba(180, 170, 255, 0.6));
+}
+
+/* Перекрашиваем точки (пагинацию) */
+.swiper-pagination-bullet {
+    background: #b8b8ff !important;
+    opacity: 0.4;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    box-shadow: 0 0 10px #b8b8ff;
+}
+
+/* ========================================================= */
+/* ====== СТИЛИ ДЛЯ БЛОКА "ОБО МНЕ" ====== */
+/* ========================================================= */
+.about-me {
+    border-color: rgba(255, 180, 200, 0.5) !important; /* Сделаем рамку чуть розовее */
+    background: linear-gradient(135deg, rgba(35, 25, 45, 0.8), rgba(25, 20, 35, 0.9)) !important;
+}
+
+.about-me h3 {
+    color: #ffb6c8 !important; /* Розовый заголовок для контраста */
+    text-shadow: 0 0 10px rgba(255, 180, 200, 0.5) !important;
+}
