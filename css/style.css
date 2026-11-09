@@ -11,14 +11,14 @@ body {
     overflow-x: hidden; /* Запрещаем горизонтальный скролл */
 }
 
-/* Фон для частиц (чтобы они были позади контента) */
+/* Фон для частиц (чтобы они были позади контента, но поверх фона) */
 #particles-js {
     position: fixed;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: 1; /* ИЗМЕНЕНО: теперь частицы поверх фона */
     pointer-events: none;
 }
 
@@ -42,7 +42,7 @@ a:hover { text-shadow: 0 0 8px rgba(180, 170, 255, 0.8); }
     margin: 0 auto;
     padding: 20px;
     position: relative;
-    z-index: 10; /* Текст поверх фоновых анимаций */
+    z-index: 10; /* Контент поверх частиц */
 }
 
 /* ====== КНОПКИ ====== */
