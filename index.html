@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selena's Tavern | Эфирная Луна</title>
+    <title>Selena's Tavern | Эфірная Луна</title>
     
-    <!-- Вот здесь подключается твой CSS -->
+    <!-- Твои стили -->
     <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Стили для карусели (Swiper) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
 
@@ -14,8 +17,8 @@
     <div id="particles-js"></div>
 
     <!-- Твоя чувиха на фоне -->
-<img src="img/chuviha (1).png" class="floating-char" alt="Selena">
-    
+    <img src="img/chuviha.png" class="floating-char" alt="Selena">
+
     <div class="container">
         <header>
             <h1>✦ Selena's Tavern ✦</h1>
@@ -28,18 +31,54 @@
             <div class="nav-menu">
                 <a href="bots.html" class="btn">🤖 Мои Боты</a>
                 <a href="themes.html" class="btn">🎨 Мои Темы</a>
-                <a href="themes.html" class="btn">⌛ Илион</a>
+                <a href="illion.html" class="btn">⏳ Илион</a>
             </div>
 
             <div class="card" style="margin-top: 50px; max-width: 800px; margin-left: auto; margin-right: auto;">
                 <h3>Добро пожаловать, путник</h3>
                 <p style="color: #e6e6fa; text-align: center;">Здесь ты найдешь карточки персонажей, созданные для погружения в глубины ACOTAR, а также кастомные темы оформления для SillyTavern. Выбирай, скачивай и наслаждайся игрой.</p>
             </div>
+
+            <!-- ====== КАРУСЕЛЬ С АРТАМИ ====== -->
+            <h2 style="margin-top: 50px; text-align: center;">Галерея</h2>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <!-- Слайд 1 -->
+                    <div class="swiper-slide">
+                        <img src="https://i.postimg.cc/gch0xKhR/b51de6152b0fcb68666070d0a7d9bc7e-removebg-preview.png" alt="Арт 1">
+                    </div>
+                    <!-- Слайд 2 -->
+                    <div class="swiper-slide">
+                        <img src="https://i.postimg.cc/FK9Z6nNm/1cccc039a1cbb13abdaf9f18c007f8b3-1.png" alt="Арт 2">
+                    </div>
+                    <!-- Слайд 3 -->
+                    <div class="swiper-slide">
+                        <img src="https://i.postimg.cc/6QZrjvSk/b717da7185898b62ca8aca7db3783e51_removebg_preview.png" alt="Арт 3">
+                    </div>
+                </div>
+                <!-- Кнопки навигации и точки -->
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+            <!-- ====== БЛОК "ОБО МНЕ" ====== -->
+            <div class="card about-me" style="margin-top: 60px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                <h3>Обо мне</h3>
+                <p style="color: #e6e6fa; text-align: center;">
+                    Привет! Меня зовут Селена. Я — ведьма с болот, обожающая вселенную ACOTAR, темное фэнтези и эстетику «Эфирной Луны». 
+                    Здесь я делюсь своими ботами, темами и артами. Создано с любовью и капелькой магии. 🦇🌙
+                </p>
+            </div>
+
         </main>
     </div>
 
-    <!-- Подключение скриптов для анимации -->
+    <!-- Скрипты -->
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <!-- Скрипт карусели Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
     <script src="js/main.js"></script>
 </body>
 </html>
