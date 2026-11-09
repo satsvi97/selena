@@ -22,3 +22,25 @@ particlesJS("particles-js", {
   },
   "retina_detect": true
 });
+
+// Инициализация карусели Swiper
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1, // На телефоне показывать 1 картинку
+    spaceBetween: 20,
+    loop: true, // Зацикленная карусель
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    // На больших экранах (ПК) показывать 2 картинки в ряд
+    breakpoints: {
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+        }
+    }
+});
