@@ -5,8 +5,20 @@ particlesJS("particles-js", {
     "shape": { "type": "circle" },
     "opacity": { "value": 0.5, "random": true },
     "size": { "value": 2, "random": true },
+    
+    // ОТКЛЮЧАЕМ ЛИНИИ МЕЖДУ ЧАСТИЦАМИ
+    "line_linked": { 
+      "enable": false 
+    },
+    
     "move": { "enable": true, "speed": 1, "direction": "none", "random": true, "out_mode": "out" }
   },
-  "interactivity": { "events": { "onhover": { "enable": true, "mode": "grab" } } },
+  
+  // ОТКЛЮЧАЕМ ЛИНИИ ПРИ НАВЕДЕНИИ МЫШКИ
+  "interactivity": { 
+    "events": { 
+      "onhover": { "enable": false } 
+    } 
+  },
   "retina_detect": true
 });
