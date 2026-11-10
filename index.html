@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selena's Tavern | Эфірная Луна</title>
+    <title data-i18n="page.index.title">Selena's Tavern | Эфирная Луна</title>
     
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -12,6 +12,17 @@
 
     <div id="particles-js"></div>
     <img src="img/chuviha.png" class="floating-char" alt="Selena">
+
+    <!-- Переключатель языка -->
+    <div class="lang-switch" role="group" aria-label="Language">
+        <span class="lang-globe" aria-hidden="true">🌐</span>
+        <select id="lang-select" aria-label="Language">
+            <option value="ru">Русский</option>
+            <option value="en">English</option>
+            <option value="uk">Українська</option>
+            <option value="sv">Svenska</option>
+        </select>
+    </div>
 
     <!-- Плавающая навигация справа -->
     <nav class="scroll-nav" aria-label="Навигация по страницам">
@@ -24,25 +35,25 @@
     <div class="container">
         <header>
             <h1>✦ Selena's Tavern ✦</h1>
-            <p style="text-align: center; color: #b8b8ff; font-style: italic;">
+            <p style="text-align: center; color: #b8b8ff; font-style: italic;" data-i18n="tagline">
                 Погрузись в мир, где песок времени встречается с лунным светом.
             </p>
         </header>
 
         <nav class="nav-menu">
-            <a href="#themes" class="btn">🎨 Мои Темы</a>
-            <a href="#extensions" class="btn">🔧 Мои Расширения</a>
-            <a href="#bots" class="btn">🤖 Мои Боты</a>
-            <a href="ilion.html" class="btn">⏳ Илион</a>
+            <a href="#themes" class="btn"><span aria-hidden="true">🎨</span> <span data-i18n="nav.themes">Мои Темы</span></a>
+            <a href="#extensions" class="btn"><span aria-hidden="true">🔧</span> <span data-i18n="nav.extensions">Мои Расширения</span></a>
+            <a href="#bots" class="btn"><span aria-hidden="true">🤖</span> <span data-i18n="nav.bots">Мои Боты</span></a>
+            <a href="ilion.html" class="btn"><span aria-hidden="true">⏳</span> <span data-i18n="nav.ilion">Илион</span></a>
         </nav>
 
         <main>
-            <!-- ====== ОБО МНЕ (СРАЗУ ПОСЛЕ ХЕДЕРА) ====== -->
+            <!-- ====== ОБО МНЕ ====== -->
             <section id="about" style="margin-top: 40px;">
                 <div class="card about-me about-me--split">
                     <div class="about-text">
-                        <h3>Обо мне</h3>
-                        <p style="color: #e6e6fa;">
+                        <h3 data-i18n="about.title">Обо мне</h3>
+                        <p style="color: #e6e6fa;" data-i18n="about.text">
                             Привет! Меня зовут Селена. Я — ведьма с болот, обожающая вселенную ACOTAR, темное фэнтези и эстетику «Эфирной Луны». 
                             Здесь я делюсь своими темами, расширениями и ботами для SillyTavern. Создано с любовью и капелькой магии. 🦇🌙
                         </p>
@@ -53,83 +64,83 @@
                 </div>
             </section>
 
-            <!-- ====== МОИ ТЕМЫ (ПЕРВЫМИ) ====== -->
+            <!-- ====== МОИ ТЕМЫ ====== -->
             <section id="themes" style="margin-top: 50px;">
-                <h2 style="text-align: center;">🎨 Мои Темы</h2>
-                <p style="text-align: center; color: #b8b8ff; margin-bottom: 30px;">Темы оформления для SillyTavern — от тёмных фэнтези до уютных таверн.</p>
+                <h2 style="text-align: center;"><span aria-hidden="true">🎨</span> <span data-i18n="themes.title">Мои Темы</span></h2>
+                <p style="text-align: center; color: #b8b8ff; margin-bottom: 30px;" data-i18n="themes.subtitle">Темы оформления для SillyTavern — от тёмных фэнтези до уютных таверн.</p>
                 <div class="card-grid" id="themes-grid">
                     <div class="card theme-card" data-theme="moonlit-tavern">
                         <img src="img/morning.jpg" alt="Moonlit Tavern" onerror="this.src='img/morning.jpg'">
                         <h3>Moonlit Tavern</h3>
-                        <p>Глубокий фиолетовый, золото, частицы лунного света. Полная перерисовка интерфейса.</p>
+                        <p data-i18n="theme.moonlit.desc">Глубокий фиолетовый, золото, частицы лунного света. Полная перерисовка интерфейса.</p>
                         <div class="theme-tags">
-                            <span class="tag">Полная</span>
-                            <span class="tag">Duotone PNG</span>
-                            <span class="tag">REAPER-style</span>
+                            <span class="tag" data-i18n="tag.full">Полная</span>
+                            <span class="tag" data-i18n="tag.duotone">Duotone PNG</span>
+                            <span class="tag" data-i18n="tag.reaper">REAPER-style</span>
                         </div>
-                        <button class="btn theme-download" data-theme="moonlit-tavern">Скачать .json</button>
+                        <button class="btn theme-download" data-theme="moonlit-tavern" data-i18n="btn.downloadJson">Скачать .json</button>
                     </div>
                 </div>
             </section>
 
             <!-- ====== МОИ РАСШИРЕНИЯ ====== -->
             <section id="extensions" style="margin-top: 60px;">
-                <h2 style="text-align: center;">🔧 Мои Расширения</h2>
-                <p style="text-align: center; color: #b8b8ff; margin-bottom: 30px;">Плагины и скрипты для SillyTavern — расширяют функционал таверны.</p>
+                <h2 style="text-align: center;"><span aria-hidden="true">🔧</span> <span data-i18n="ext.title">Мои Расширения</span></h2>
+                <p style="text-align: center; color: #b8b8ff; margin-bottom: 30px;" data-i18n="ext.subtitle">Плагины и скрипты для SillyTavern — расширяют функционал таверны.</p>
                 <div class="card-grid" id="extensions-grid">
                     <div class="card ext-card" data-ext="scene-panel">
                         <div class="ext-icon">📅</div>
                         <h3>Scene Panel</h3>
-                        <p>Панель сцены: календарь, место, время, погода, кто рядом, открытые нити. ИИ обновляет тегом <code>[[scene: ...]]</code>.</p>
+                        <p data-i18n-html="ext.scene.desc">Панель сцены: календарь, место, время, погода, кто рядом, открытые нити. ИИ обновляет тегом <code>[[scene: ...]]</code>.</p>
                         <div class="ext-links">
-                            <a href="https://github.com/satsvi97/scene-panel" target="_blank" class="btn">GitHub</a>
-                            <button class="btn ext-install" data-ext="scene-panel">Установить</button>
+                            <a href="https://github.com/satsvi97/scene-panel" target="_blank" class="btn" data-i18n="btn.github">GitHub</a>
+                            <button class="btn ext-install" data-ext="scene-panel" data-i18n="btn.install">Установить</button>
                         </div>
                         <div class="ext-tags">
-                            <span class="tag">SillyTavern</span>
-                            <span class="tag">RP Tools</span>
-                            <span class="tag">MIT</span>
+                            <span class="tag" data-i18n="tag.sillytavern">SillyTavern</span>
+                            <span class="tag" data-i18n="tag.rptools">RP Tools</span>
+                            <span class="tag" data-i18n="tag.mit">MIT</span>
                         </div>
                     </div>
                     <div class="card ext-card" data-ext="lorbook-sync">
                         <div class="ext-icon">📚</div>
-                        <h3>Lorebook Sync (планируется)</h3>
-                        <p>Синхронизация лорбуков между чатами и экспорт в Notion/Obsidian.</p>
+                        <h3 data-i18n="ext.lore.title">Lorebook Sync (планируется)</h3>
+                        <p data-i18n="ext.lore.desc">Синхронизация лорбуков между чатами и экспорт в Notion/Obsidian.</p>
                         <div class="ext-links">
-                            <button class="btn" disabled>Скоро</button>
+                            <button class="btn" disabled data-i18n="btn.soon">Скоро</button>
                         </div>
                         <div class="ext-tags">
-                            <span class="tag">WIP</span>
-                            <span class="tag">Lorebook</span>
+                            <span class="tag" data-i18n="tag.wip">WIP</span>
+                            <span class="tag" data-i18n="tag.lorebook">Lorebook</span>
                         </div>
                     </div>
                     <div class="card ext-card empty" data-ext="new">
                         <div class="empty-icon">+</div>
-                        <h3>Новое расширение</h3>
-                        <p>Есть идея? Напиши мне.</p>
+                        <h3 data-i18n="ext.new.title">Новое расширение</h3>
+                        <p data-i18n="ext.new.desc">Есть идея? Напиши мне.</p>
                     </div>
                 </div>
             </section>
 
-            <!-- ====== МОИ БОТЫ (В САМОМ КОНЦЕ, ПУСТО) ====== -->
+            <!-- ====== МОИ БОТЫ ====== -->
             <section id="bots" style="margin-top: 60px;">
-                <h2 style="text-align: center;">🤖 Мои Боты</h2>
-                <p style="text-align: center; color: #b8b8ff; margin-bottom: 30px;">Персонажи для SillyTavern. Пока пусто — наполняю по мере готовности.</p>
+                <h2 style="text-align: center;"><span aria-hidden="true">🤖</span> <span data-i18n="bots.title">Мои Боты</span></h2>
+                <p style="text-align: center; color: #b8b8ff; margin-bottom: 30px;" data-i18n="bots.subtitle">Персонажи для SillyTavern. Пока пусто — наполняю по мере готовности.</p>
                 <div class="card-grid" id="bots-grid">
                     <div class="card bot-card empty" data-bot="new">
                         <div class="empty-icon">+</div>
-                        <h3>Скоро...</h3>
-                        <p>Новые персонажи появятся здесь.</p>
+                        <h3 data-i18n="bots.soon.title">Скоро...</h3>
+                        <p data-i18n="bots.soon.desc">Новые персонажи появятся здесь.</p>
                     </div>
                     <div class="card bot-card empty" data-bot="new">
                         <div class="empty-icon">+</div>
-                        <h3>Скоро...</h3>
-                        <p>Новые персонажи появятся здесь.</p>
+                        <h3 data-i18n="bots.soon.title">Скоро...</h3>
+                        <p data-i18n="bots.soon.desc">Новые персонажи появятся здесь.</p>
                     </div>
                     <div class="card bot-card empty" data-bot="new">
                         <div class="empty-icon">+</div>
-                        <h3>Скоро...</h3>
-                        <p>Новые персонажи появятся здесь.</p>
+                        <h3 data-i18n="bots.soon.title">Скоро...</h3>
+                        <p data-i18n="bots.soon.desc">Новые персонажи появятся здесь.</p>
                     </div>
                 </div>
             </section>
@@ -139,6 +150,7 @@
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/i18n.js"></script>
     
     <script>
     // Активная точка в плавающей навигации при скролле
