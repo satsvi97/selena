@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selena's Tavern | Эфірная Луна</title>
     
-    <!-- Твои стили -->
+    <!-- Стили -->
     <link rel="stylesheet" href="css/style.css">
     
     <!-- Стили для карусели (Swiper) -->
@@ -27,56 +27,242 @@
             </p>
         </header>
 
+        <nav class="nav-menu">
+            <a href="#bots" class="btn">🤖 Мои Боты</a>
+            <a href="#themes" class="btn">🎨 Мои Темы</a>
+            <a href="#extensions" class="btn">🔧 Мои Расширения</a>
+            <a href="#ilion" class="btn">⏳ Илион</a>
+        </nav>
+
         <main>
-            <div class="nav-menu">
-                <a href="bots.html" class="btn">🤖 Мои Боты</a>
-                <a href="themes.html" class="btn">🎨 Мои Темы</a>
-                <a href="illion.html" class="btn">⏳ Илион</a>
-            </div>
-
-            <div class="card" style="margin-top: 50px; max-width: 800px; margin-left: auto; margin-right: auto;">
+            <!-- ====== HERO / WELCOME ====== -->
+            <section id="welcome" class="card" style="margin-top: 30px; max-width: 800px; margin-left: auto; margin-right: auto; text-align: center;">
                 <h3>Добро пожаловать, путник</h3>
-                <p style="color: #e6e6fa; text-align: center;">Здесь ты найдешь карточки персонажей, созданные для погружения в глубины ACOTAR, а также кастомные темы оформления для SillyTavern. Выбирай, скачивай и наслаждайся игрой.</p>
-            </div>
+                <p style="color: #e6e6fa;">Здесь ты найдешь карточки персонажей, созданные для погружения в глубины ACOTAR, а также кастомные темы оформления и расширения для SillyTavern. Выбирай, скачивай и наслаждайся игрой.</p>
+            </section>
 
-            <!-- ====== КАРУСЕЛЬ С АРТАМИ ====== -->
-            <h2 style="margin-top: 50px; text-align: center;">Галерея</h2>
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <!-- Слайд 1 -->
-                    <div class="swiper-slide">
-                        <img src="img/5442874246360144657_121.jpg" alt="Арт 1">
+            <!-- ====== ГАЛЕРЕЯ ====== -->
+            <section id="gallery" style="margin-top: 50px;">
+                <h2 style="text-align: center;">Галерея</h2>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <!-- Слайд 1 -->
+                        <div class="swiper-slide">
+                            <img src="img/selena.port.jpg" alt="Selena Portrait">
+                        </div>
+                        <!-- Слайд 2 -->
+                        <div class="swiper-slide">
+                            <img src="img/selena.moon.port.jpg" alt="Selena Moon Portrait">
+                        </div>
+                        <!-- Слайд 3 -->
+                        <div class="swiper-slide">
+                            <img src="img/selenamelancholy.jpg" alt="Selena Melancholy">
+                        </div>
+                        <!-- Слайд 4 -->
+                        <div class="swiper-slide">
+                            <img src="img/scene_i_forest.jpg" alt="Forest Scene">
+                        </div>
+                        <!-- Слайд 5 -->
+                        <div class="swiper-slide">
+                            <img src="img/desert.jpg" alt="Desert Sands">
+                        </div>
+                        <!-- Слайд 6 -->
+                        <div class="swiper-slide">
+                            <img src="img/morning.sun.jpg" alt="Morning Sun">
+                        </div>
                     </div>
-                    <!-- Слайд 2 -->
-                    <div class="swiper-slide">
-                        <img src="img/Gemini_Generated_Image_ktak35ktak35ktak.jpg" alt="Арт 2">
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </section>
+
+            <!-- ====== МОИ БОТЫ ====== -->
+            <section id="bots" style="margin-top: 60px;">
+                <h2 style="text-align: center;">🤖 Мои Боты</h2>
+                <p style="text-align: center; color: #b8b8ff; margin-bottom: 30px;">Персонажи для SillyTavern — карточки с описанием, примерами диалогов и настройками.</p>
+                <div class="card-grid" id="bots-grid">
+                    <!-- Карточки ботов будут здесь -->
+                    <div class="card bot-card" data-bot="rizand">
+                        <img src="img/rizand.jpg" alt="Ризанд" onerror="this.src='img/selena.port.jpg'">
+                        <h3>Ризанд</h3>
+                        <p>Верховный лорд Дворца Ночи. Холодный, расчётливый, но скрывающий раны прошлого.</p>
+                        <div class="bot-tags">
+                            <span class="tag">ACOTAR</span>
+                            <span class="tag">Доминантный</span>
+                            <span class="tag">Slow burn</span>
+                        </div>
+                        <button class="btn bot-download" data-bot="rizand">Скачать JSON</button>
                     </div>
-                    <!-- Слайд 3 -->
-                    <div class="swiper-slide">
-                        <img src="img/Gemini_Generated_Image_eobqg1eobqg1eobq.jpg">
+                    <div class="card bot-card" data-bot="nyx">
+                        <img src="img/nyx.jpg" alt="Никс" onerror="this.src='img/selena.moon.port.jpg'">
+                        <h3>Никс</h3>
+                        <p>Теневой убийца с чертой юмора. Верность нужно заслужить.</p>
+                        <div class="bot-tags">
+                            <span class="tag">OC</span>
+                            <span class="tag">Рогатый</span>
+                            <span class="tag">Защитник</span>
+                        </div>
+                        <button class="btn bot-download" data-bot="nyx">Скачать JSON</button>
+                    </div>
+                    <div class="card bot-card" data-bot="feyre">
+                        <img src="img/feyre.jpg" alt="Фейра" onerror="this.src='img/selenamelancholy.jpg'">
+                        <h3>Фейра</h3>
+                        <p>Высокая Леди Дня. Сильная, упрямая, любит читать и ломать прогнозы.</p>
+                        <div class="bot-tags">
+                            <span class="tag">ACOTAR</span>
+                            <span class="tag">Протагонист</span>
+                            <span class="tag">Магия</span>
+                        </div>
+                        <button class="btn bot-download" data-bot="feyre">Скачать JSON</button>
+                    </div>
+                    <!-- Пустые слоты для будущих ботов -->
+                    <div class="card bot-card empty" data-bot="new">
+                        <div class="empty-icon">+</div>
+                        <h3>Новый бот</h3>
+                        <p>Скоро здесь появится новый персонаж...</p>
+                    </div>
+                    <div class="card bot-card empty" data-bot="new">
+                        <div class="empty-icon">+</div>
+                        <h3>Новый бот</h3>
+                        <p>Скоро здесь появится новый персонаж...</p>
+                    </div>
+                    <div class="card bot-card empty" data-bot="new">
+                        <div class="empty-icon">+</div>
+                        <h3>Новый бот</h3>
+                        <p>Скоро здесь появится новый персонаж...</p>
                     </div>
                 </div>
-                <!-- Кнопки навигации и точки -->
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-            </div>
+            </section>
 
-            <!-- ====== БЛОК "ОБО МНЕ" ====== -->
-            <div class="card about-me" style="margin-top: 60px; max-width: 800px; margin-left: auto; margin-right: auto;">
-                <h3>Обо мне</h3>
-                <p style="color: #e6e6fa; text-align: center;">
-                    Привет! Меня зовут Селена. Я — ведьма с болот, обожающая вселенную ACOTAR, темное фэнтези и эстетику «Эфирной Луны». 
-                    Здесь я делюсь своими ботами, темами и артами. Создано с любовью и капелькой магии. 🦇🌙
-                </p>
-            </div>
+            <!-- ====== МОИ ТЕМЫ ====== -->
+            <section id="themes" style="margin-top: 60px;">
+                <h2 style="text-align: center;">🎨 Мои Темы</h2>
+                <p style="text-align: center; color: #b8b8ff; margin-bottom: 30px;">Темы оформления для SillyTavern — от тёмных фэнтези до уютных таверн.</p>
+                <div class="card-grid" id="themes-grid">
+                    <div class="card theme-card" data-theme="moonlit-tavern">
+                        <img src="img/morning.jpg" alt="Moonlit Tavern" onerror="this.src='img/morning.jpg'">
+                        <h3>Moonlit Tavern</h3>
+                        <p>Глубокий фиолетовый, золото, частицы лунного света. Полная перерисовка интерфейса.</p>
+                        <div class="theme-tags">
+                            <span class="tag">Полная</span>
+                            <span class="tag">Duotone PNG</span>
+                            <span class="tag">REAPER-style</span>
+                        </div>
+                        <button class="btn theme-download" data-theme="moonlit-tavern">Скачать .json</button>
+                    </div>
+                    <div class="card theme-card" data-theme="ethereal-moon">
+                        <img src="img/morningsunlight.jpg" alt="Ethereal Moon" onerror="this.src='img/morningsunlight.jpg'">
+                        <h3>Ethereal Moon</h3>
+                        <p>Лёгкая, воздушная тема в тонах сиреневого и перламутрового. Только цвета.</p>
+                        <div class="theme-tags">
+                            <span class="tag">Color-only</span>
+                            <span class="tag">Light</span>
+                            <span class="tag">Minimal</span>
+                        </div>
+                        <button class="btn theme-download" data-theme="ethereal-moon">Скачать .json</button>
+                    </div>
+                    <div class="card theme-card" data-theme="velvet-night">
+                        <img src="img/clock.dance.jpg" alt="Velvet Night" onerror="this.src='img/clock.dance.jpg'">
+                        <h3>Velvet Night</h3>
+                        <p>Бархатная ночь, глубокие синие, золотые акценты. Для долгих сессий чтения.</p>
+                        <div class="theme-tags">
+                            <span class="tag">Dark</span>
+                            <span class="tag">Reading</span>
+                            <span class="tag">Comfort</span>
+                        </div>
+                        <button class="btn theme-download" data-theme="velvet-night">Скачать .json</button>
+                    </div>
+                    <div class="card theme-card empty" data-theme="new">
+                        <div class="empty-icon">+</div>
+                        <h3>Новая тема</h3>
+                        <p>В процессе создания...</p>
+                    </div>
+                    <div class="card theme-card empty" data-theme="new">
+                        <div class="empty-icon">+</div>
+                        <h3>Новая тема</h3>
+                        <p>В процессе создания...</p>
+                    </div>
+                </div>
+            </section>
 
+            <!-- ====== МОИ РАСШИРЕНИЯ ====== -->
+            <section id="extensions" style="margin-top: 60px;">
+                <h2 style="text-align: center;">🔧 Мои Расширения</h2>
+                <p style="text-align: center; color: #b8b8ff; margin-bottom: 30px;">Плагины и скрипты для SillyTavern — расширяют функционал таверны.</p>
+                <div class="card-grid" id="extensions-grid">
+                    <div class="card ext-card" data-ext="scene-panel">
+                        <div class="ext-icon">📅</div>
+                        <h3>Scene Panel</h3>
+                        <p>Панель сцены: календарь, место, время, погода, кто рядом, открытые нити. ИИ обновляет тегом <code>[[scene: ...]]</code>.</p>
+                        <div class="ext-links">
+                            <a href="https://github.com/satsvi97/scene-panel" target="_blank" class="btn">GitHub</a>
+                            <button class="btn ext-install" data-ext="scene-panel">Установить</button>
+                        </div>
+                        <div class="ext-tags">
+                            <span class="tag">SillyTavern</span>
+                            <span class="tag">RP Tools</span>
+                            <span class="tag">MIT</span>
+                        </div>
+                    </div>
+                    <div class="card ext-card" data-ext="dice-roller">
+                        <div class="ext-icon">🎲</div>
+                        <h3>Dice Roller (планируется)</h3>
+                        <p>Броски кубиков в чате с поддержкой формул (2d6+3, 1d20adv) и красивой анимацией.</p>
+                        <div class="ext-links">
+                            <button class="btn" disabled>Скоро</button>
+                        </div>
+                        <div class="ext-tags">
+                            <span class="tag">WIP</span>
+                            <span class="tag">Dice</span>
+                        </div>
+                    </div>
+                    <div class="card ext-card" data-ext="lorbook-sync">
+                        <div class="ext-icon">📚</div>
+                        <h3>Lorebook Sync (планируется)</h3>
+                        <p>Синхронизация лорбуков между чатами и экспорт в Notion/Obsidian.</p>
+                        <div class="ext-links">
+                            <button class="btn" disabled>Скоро</button>
+                        </div>
+                        <div class="ext-tags">
+                            <span class="tag">WIP</span>
+                            <span class="tag">Lorebook</span>
+                        </div>
+                    </div>
+                    <div class="card ext-card empty" data-ext="new">
+                        <div class="empty-icon">+</div>
+                        <h3>Новое расширение</h3>
+                        <p>Есть идея? Напиши мне.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ====== ИЛИОН ====== -->
+            <section id="ilion" style="margin-top: 60px;">
+                <h2 style="text-align: center;">⏳ Илион</h2>
+                <div class="card about-me" style="max-width: 800px; margin-left: auto; margin-right: auto; text-align: center;">
+                    <h3>Мир песков времени</h3>
+                    <p style="color: #e6e6fa;">Илион — это исходный мир для моих историй и ботов. Древние руины, пески, что помнят каждый шаг, и луна, что никогда не заходит.</p>
+                    <p style="color: #e6e6fa; margin-top: 15px;">Здесь будут: карта, хроники, пантеон, расы, магия песков, фракции.</p>
+                    <button class="btn" style="margin-top: 20px;" disabled>В разработке...</button>
+                </div>
+            </section>
+
+            <!-- ====== ОБО МНЕ ====== -->
+            <section id="about" style="margin-top: 60px;">
+                <div class="card about-me" style="max-width: 800px; margin-left: auto; margin-right: auto;">
+                    <h3>Обо мне</h3>
+                    <p style="color: #e6e6fa; text-align: center;">
+                        Привет! Меня зовут Селена. Я — ведьма с болот, обожающая вселенную ACOTAR, темное фэнтези и эстетику «Эфирной Луны». 
+                        Здесь я делюсь своими ботами, темами и артами. Создано с любовью и капелькой магии. 🦇🌙
+                    </p>
+                </div>
+            </section>
         </main>
     </div>
 
     <!-- Скрипты -->
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <!-- Скрипт карусели Swiper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     
     <script src="js/main.js"></script>
