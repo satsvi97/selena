@@ -29,16 +29,9 @@ function initParticles() {
     });
 }
 
-// Запускаем когда DOM готов
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initParticles);
-} else {
-    initParticles();
-}
-
-// Инициализация карусели Swiper (тоже после DOM)
+// Старая галерея на главной (если где-то останется .mySwiper)
 function initSwiper() {
-    if (!document.querySelector('.mySwiper')) return; // на страницах без карусели
+    if (!document.querySelector('.mySwiper')) return;
     if (typeof Swiper === 'undefined') {
         setTimeout(initSwiper, 100);
         return;
@@ -52,8 +45,82 @@ function initSwiper() {
         breakpoints: { 768: { slidesPerView: 2, spaceBetween: 30 } }
     });
 }
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initSwiper);
-} else {
+
+// Карусель скриншотов внутри карточки темы
+function initThemeGallery() {
+    const galleries = document.querySelectorAll('.theme-gallery');
+    if (!galleries.length) return;
+    if (typeof Swiper === 'undefined') {
+        setTimeout(initThemeGallery, 100);
+        return;
+    }
+    galleries.forEach((el) => {
+        new Swiper(el, {
+            slidesPerView: 1,
+            spaceBetween: 8,
+            loop: true,
+            pagination: {
+                el: el.querySelector('.swiper-pagination'),
+                clickable: true,
+            },
+            navigation: {
+                nextEl: el.querySelector('.swiper-button-next'),
+                prevEl: el.querySelector('.swiper-button-prev'),
+            },
+        });
+    });
+}
+
+// Лайтбокс: клик по скриншоту — открыть в большом формате
+function initLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    if (!lightbox) return;
+    const img = lightbox.querySelector('.lightbox-img');
+    const closeBtn = lightbox.querySelector('.lightbox-close');
+
+    const open = (source) => {
+        img.src = source.currentSrc || source.src;
+        img.alt = source.alt || '';
+        lightbox.classList.add('is-open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('lightbox-open');
+    };
+    const close = () => {
+        lightbox.classList.remove('is-open');
+        lightbox.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('lightbox-open');
+        img.src = '';
+    };
+
+    // Делегирование: работает и для клонов Swiper
+    document.querySelectorAll('.theme-gallery').forEach((gallery) => {
+        gallery.addEventListener('click', (e) => {
+            const target = e.target.closest('img');
+            if (target) open(target);
+        });
+    });
+
+    lightbox.addEventListener('click', close);
+    if (closeBtn) {
+        closeBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            close();
+        });
+    }
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') close();
+    });
+}
+
+function initAll() {
+    initParticles();
     initSwiper();
+    initThemeGallery();
+    initLightbox();
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAll);
+} else {
+    initAll();
 }
