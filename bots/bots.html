@@ -1,1 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои Боты | Selena's Tavern</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
+    <div id="particles-js"></div>
+
+    <div class="container">
+        <header>
+            <h1>Мои Боты</h1>
+            <div class="nav-menu">
+                <a href="index.html" class="btn">← На главную</a>
+            </div>
+        </header>
+
+        <main>
+            <div class="card-grid">
+                
+                <!-- КАРТОЧКА РИЗАНДА -->
+                <div class="card" id="card-rizand">
+                    <!-- Замени ссылку на свою картинку Ризанда -->
+                    <img src="https://i.postimg.cc/3N65Jc4G/rizand.jpg" alt="Ризанд">
+                    <h3>Ризанд</h3>
+                    <p>Верховный Владыка Двора Ночи. Тот, кто вытащил тебя с того света.</p>
+                    <span class="btn">Подробнее</span>
+                </div>
+
+                <!-- Сюда потом добавишь следующие карточки -->
+                <!--
+                <div class="card" id="card-next">
+                    <img src="..." alt="...">
+                    <h3>Имя</h3>
+                    <p>Краткое описание.</p>
+                    <span class="btn">Подробнее</span>
+                </div>
+                -->
+
+            </div>
+        </main>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- МОДАЛЬНОЕ ОКНО С ИНФОРМАЦИЕЙ О РИЗАНДЕ -->
+    <!-- ========================================== -->
+    <div id="modal-rizand" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Ризанд</h2>
+            <img src="https://i.postimg.cc/3N65Jc4G/rizand.jpg" alt="Ризанд" class="modal-avatar">
+            
+            <div class="modal-text">
+                <p><strong>Роль:</strong> Верховный Владыка Двора Ночи.</p>
+                <p><strong>Характер:</strong> Властный, саркастичный, но до безумия преданный тем, кого любит. Носит маску злодея, чтобы защитить своих.</p>
+                <p><strong>История:</strong> Тысячи лет назад был воином Нергалом, возлюбленным Хранительницы Времени Кханы (твоей прошлой жизни). После ее смерти прожил жизнь человеком, а затем переродился в мире фейри.</p>
+                <p><strong>Связь:</strong> Между ним и Селеной (тобой) существует древняя связь, которая старше самого Котла. Она проснулась, когда ты призвала его на болоте.</p>
+                
+                <div style="text-align: center; margin-top: 20px;">
+                    <!-- Сюда можно вставить ссылку на скачивание карточки -->
+                    <a href="#" class="btn">Скачать карточку (PNG)</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
