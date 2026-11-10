@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Comfortaa:wght@400;500;700&display=swap');
 
 /* ====== БАЗОВЫЕ НАСТРОЙКИ И ФОН ====== */
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: 'Comfortaa', sans-serif;
     background: linear-gradient(135deg, #0d0914 0%, #1e1433 40%, #2a1e4d 100%);
@@ -9,7 +12,6 @@ body {
     padding: 0;
     min-height: 100vh;
     overflow-x: hidden;
-    scroll-behavior: smooth;
 }
 
 /* Фон для частиц */
@@ -21,6 +23,64 @@ body {
     left: 0;
     z-index: 1;
     pointer-events: none;
+}
+
+/* ====== ПЛАВАЮЩАЯ НАВИГАЦИЯ (справа) ====== */
+.scroll-nav {
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    pointer-events: none; /* сами точки кликабельны, контейнер нет */
+}
+.scroll-nav__dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: rgba(180, 170, 255, 0.25);
+    border: 2px solid rgba(180, 170, 255, 0.5);
+    cursor: pointer;
+    pointer-events: auto;
+    transition: all 0.3s ease;
+    position: relative;
+}
+.scroll-nav__dot::before {
+    content: attr(data-label);
+    position: absolute;
+    right: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 0.75em;
+    color: #b8b8ff;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+    text-shadow: 0 0 5px rgba(180, 170, 255, 0.6);
+}
+.scroll-nav__dot:hover {
+    background: rgba(180, 170, 255, 0.5);
+    border-color: #d4d4ff;
+    box-shadow: 0 0 15px rgba(180, 170, 255, 0.6);
+    transform: scale(1.2);
+}
+.scroll-nav__dot:hover::before {
+    opacity: 1;
+    visibility: visible;
+    right: 28px;
+}
+.scroll-nav__dot.active {
+    background: #b8b8ff;
+    border-color: #d4d4ff;
+    box-shadow: 0 0 20px rgba(180, 170, 255, 0.8);
+}
+@media (max-width: 768px) {
+    .scroll-nav { display: none; }
 }
 
 /* ====== ТИПОГРАФИКА ====== */
@@ -49,7 +109,7 @@ code { background: rgba(180, 170, 255, 0.15); padding: 2px 6px; border-radius: 4
     z-index: 10;
 }
 
-/* ====== НАВИГАЦИЯ ====== */
+/* ====== НАВИГАЦИЯ (верхняя) ====== */
 .nav-menu {
     display: flex;
     justify-content: center;
