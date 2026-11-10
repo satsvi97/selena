@@ -13,6 +13,15 @@
     <div id="particles-js"></div>
     <img src="img/chuviha.png" class="floating-char" alt="Selena">
 
+    <!-- Плавающая навигация справа -->
+    <nav class="scroll-nav" aria-label="Навигация по страницам">
+        <a href="#about" class="scroll-nav__dot" data-label="Обо мне"></a>
+        <a href="#themes" class="scroll-nav__dot" data-label="Темы"></a>
+        <a href="#extensions" class="scroll-nav__dot" data-label="Расширения"></a>
+        <a href="#bots" class="scroll-nav__dot" data-label="Боты"></a>
+        <a href="#ilion" class="scroll-nav__dot" data-label="Илион"></a>
+    </nav>
+
     <div class="container">
         <header>
             <h1>✦ Selena's Tavern ✦</h1>
@@ -181,5 +190,41 @@
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
+    
+    <script>
+    // Активная точка в плавающей навигации при скролле
+    const sections = ['about', 'themes', 'extensions', 'bots', 'ilion'];
+    const dots = document.querySelectorAll('.scroll-nav__dot');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.id;
+                dots.forEach(dot => {
+                    dot.classList.toggle('active', dot.getAttribute('href') === '#' + id);
+                });
+            }
+        });
+    }, { rootMargin: '-40% 0px -50% 0px', threshold: 0 });
+    
+    sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) observer.observe(el);
+    });
+    
+    // Плавный скролл для якорей (фоллбек для старых браузеров)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            const target = document.querySelector(targetId);
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                history.pushState(null, '', targetId);
+            }
+        });
+    });
+    </script>
 </body>
 </html>
