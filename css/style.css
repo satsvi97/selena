@@ -83,6 +83,51 @@ body {
     .scroll-nav { display: none; }
 }
 
+/* ====== ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКА ====== */
+.lang-switch {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 300;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: rgba(25, 20, 40, 0.82);
+    border: 1px solid rgba(180, 170, 255, 0.5);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+.lang-switch .lang-globe {
+    font-size: 0.95rem;
+    line-height: 1;
+}
+.lang-switch select {
+    background: transparent;
+    border: none;
+    color: #d4d4ff;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 0.85rem;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+}
+.lang-switch select option {
+    background: #1e1433;
+    color: #e6e6fa;
+}
+@media (max-width: 768px) {
+    .lang-switch {
+        top: 10px;
+        right: 10px;
+        padding: 5px 8px;
+    }
+    .lang-switch select { font-size: 0.8rem; }
+    header { padding-top: 34px; }
+}
+
 /* ====== ТИПОГРАФИКА ====== */
 h1, h2, h3 {
     font-family: 'Cinzel', serif;
