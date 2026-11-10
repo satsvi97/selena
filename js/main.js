@@ -38,6 +38,7 @@ if (document.readyState === 'loading') {
 
 // Инициализация карусели Swiper (тоже после DOM)
 function initSwiper() {
+    if (!document.querySelector('.mySwiper')) return; // на страницах без карусели
     if (typeof Swiper === 'undefined') {
         setTimeout(initSwiper, 100);
         return;
