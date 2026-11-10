@@ -15,7 +15,7 @@ function initParticles() {
             "move": { "enable": true, "speed": 1, "direction": "none", "random": true, "out_mode": "out" }
         },
         "interactivity": {
-            "detect_on": "canvas", // важно: события на canvas, не на window
+            "detect_on": "window", // ловим мышь по всему экрану, даже над карточками
             "events": {
                 "onhover": { "enable": true, "mode": "repulse" },
                 "onclick": { "enable": true, "mode": "push" }
