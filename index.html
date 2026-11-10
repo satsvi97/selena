@@ -19,7 +19,6 @@
         <a href="#themes" class="scroll-nav__dot" data-label="Темы"></a>
         <a href="#extensions" class="scroll-nav__dot" data-label="Расширения"></a>
         <a href="#bots" class="scroll-nav__dot" data-label="Боты"></a>
-        <a href="#ilion" class="scroll-nav__dot" data-label="Илион"></a>
     </nav>
 
     <div class="container">
@@ -34,7 +33,7 @@
             <a href="#themes" class="btn">🎨 Мои Темы</a>
             <a href="#extensions" class="btn">🔧 Мои Расширения</a>
             <a href="#bots" class="btn">🤖 Мои Боты</a>
-            <a href="#ilion" class="btn">⏳ Илион</a>
+            <a href="ilion.html" class="btn">⏳ Илион</a>
         </nav>
 
         <main>
@@ -134,17 +133,6 @@
                     </div>
                 </div>
             </section>
-
-            <!-- ====== ИЛИОН ====== -->
-            <section id="ilion" style="margin-top: 60px;">
-                <h2 style="text-align: center;">⏳ Илион</h2>
-                <div class="card about-me" style="max-width: 800px; margin-left: auto; margin-right: auto; text-align: center;">
-                    <h3>Мир песков времени</h3>
-                    <p style="color: #e6e6fa;">Илион — это исходный мир для моих историй и ботов. Древние руины, пески, что помнят каждый шаг, и луна, что никогда не заходит.</p>
-                    <p style="color: #e6e6fa; margin-top: 15px;">Здесь будут: карта, хроники, пантеон, расы, магия песков, фракции.</p>
-                    <button class="btn" style="margin-top: 20px;" disabled>В разработке...</button>
-                </div>
-            </section>
         </main>
     </div>
 
@@ -154,7 +142,7 @@
     
     <script>
     // Активная точка в плавающей навигации при скролле
-    const sections = ['about', 'themes', 'extensions', 'bots', 'ilion'];
+    const sections = ['about', 'themes', 'extensions', 'bots'];
     const dots = document.querySelectorAll('.scroll-nav__dot');
     
     const observer = new IntersectionObserver((entries) => {
