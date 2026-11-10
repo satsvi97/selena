@@ -6,28 +6,48 @@ particlesJS("particles-js", {
     "opacity": { "value": 0.5, "random": true },
     "size": { "value": 2, "random": true },
     
-    // ОТКЛЮЧАЕМ ЛИНИИ МЕЖДУ ЧАСТИЦАМИ
     "line_linked": { 
       "enable": false 
     },
     
-    "move": { "enable": true, "speed": 1, "direction": "none", "random": true, "out_mode": "out" }
+    "move": { 
+      "enable": true, 
+      "speed": 1, 
+      "direction": "none", 
+      "random": true, 
+      "out_mode": "out" 
+    }
   },
   
-  // ОТКЛЮЧАЕМ ЛИНИИ ПРИ НАВЕДЕНИИ МЫШКИ
   "interactivity": { 
     "events": { 
-      "onhover": { "enable": false } 
-    } 
+      "onhover": { 
+        "enable": true, 
+        "mode": "repulse" 
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      }
+    },
+    "modes": {
+      "repulse": {
+        "distance": 120,
+        "duration": 0.8
+      },
+      "push": {
+        "particles_nb": 4
+      }
+    }
   },
   "retina_detect": true
 });
 
 // Инициализация карусели Swiper
 var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1, // На телефоне показывать 1 картинку
+    slidesPerView: 1,
     spaceBetween: 20,
-    loop: true, // Зацикленная карусель
+    loop: true,
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -36,7 +56,6 @@ var swiper = new Swiper(".mySwiper", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
-    // На больших экранах (ПК) показывать 2 картинки в ряд
     breakpoints: {
         768: {
             slidesPerView: 2,
