@@ -278,6 +278,120 @@ code { background: rgba(180, 170, 255, 0.15); padding: 2px 6px; border-radius: 4
     font-size: 0.85em;
 }
 
+/* ====== КАРУСЕЛЬ СКРИНШОТОВ В КАРТОЧКЕ ТЕМЫ ====== */
+.theme-gallery {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    border: 1px solid rgba(180, 170, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    background: #0d0914;
+}
+.theme-gallery .swiper-wrapper,
+.theme-gallery .swiper-slide {
+    height: 100%;
+}
+.theme-gallery .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: auto;
+    object-fit: cover;
+    object-position: center top;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    cursor: zoom-in;
+}
+.theme-gallery .swiper-button-next,
+.theme-gallery .swiper-button-prev {
+    width: 26px;
+    height: 26px;
+    margin-top: 0;
+    background: rgba(13, 9, 20, 0.6);
+    border-radius: 50%;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    color: #d4d4ff !important;
+}
+.theme-gallery .swiper-button-next::after,
+.theme-gallery .swiper-button-prev::after {
+    font-size: 11px;
+    font-weight: 700;
+}
+.theme-gallery .swiper-pagination {
+    bottom: 6px !important;
+}
+.theme-gallery .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+    margin: 0 3px !important;
+    background: #b8b8ff !important;
+}
+.theme-zoom-hint {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    z-index: 5;
+    font-size: 0.8rem;
+    line-height: 1;
+    padding: 2px 6px;
+    border-radius: 6px;
+    background: rgba(13, 9, 20, 0.6);
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+/* ====== ЛАЙТБОКС ====== */
+body.lightbox-open {
+    overflow: hidden;
+}
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(5, 3, 10, 0.92);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    cursor: zoom-out;
+}
+.lightbox.is-open {
+    display: flex;
+}
+.lightbox-img {
+    max-width: 94vw;
+    max-height: 92vh;
+    border-radius: 10px;
+    border: 1px solid rgba(180, 170, 255, 0.4);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+    object-fit: contain;
+    cursor: zoom-out;
+}
+.lightbox-close {
+    position: fixed;
+    top: 14px;
+    right: 20px;
+    z-index: 2100;
+    background: none;
+    border: none;
+    color: #d4d4ff;
+    font-size: 2.4rem;
+    line-height: 1;
+    cursor: pointer;
+    text-shadow: 0 0 10px rgba(180, 170, 255, 0.6);
+}
+.lightbox-close:hover {
+    color: #ffb6c8;
+}
+
 /* ====== ПУСТЫЕ КАРТОЧКИ ====== */
 .card.empty {
     opacity: 0.6;
