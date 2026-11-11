@@ -246,8 +246,9 @@ code { background: rgba(180, 170, 255, 0.15); padding: 2px 6px; border-radius: 4
 }
 
 /* Темы: одна карточка — по центру, аккуратного размера */
-#themes-grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 420px));
+#themes-grid,
+#extensions-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 360px));
     justify-content: center;
 }
 
@@ -504,6 +505,10 @@ body.lightbox-open {
     text-align: center;
     margin-bottom: 10px;
 }
+.ext-icon--emblems {
+    font-size: 1.4em;
+    letter-spacing: 2px;
+}
 .ext-links {
     display: flex;
     gap: 10px;
@@ -724,10 +729,10 @@ body::after {
     z-index: 10;
     margin-top: 70px;
     padding: 28px 20px calc(28px + env(safe-area-inset-bottom, 0px));
-    background-color: #07040c;
-    background-image: linear-gradient(180deg, #0b0714 0%, #06030a 100%);
-    border-top: 1px solid rgba(180, 170, 255, 0.28);
-    box-shadow: inset 0 1px 0 rgba(180, 170, 255, 0.08);
+    background-color: #120d1c;
+    background-image: linear-gradient(180deg, #171026 0%, #0e0916 100%);
+    border-top: 1px solid rgba(232, 195, 150, 0.22);
+    box-shadow: inset 0 1px 0 rgba(232, 195, 150, 0.08);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -746,9 +751,9 @@ body::after {
     gap: 9px;
     padding: 9px 18px;
     border-radius: 999px;
-    background: rgba(25, 20, 40, 0.7);
-    border: 1px solid rgba(180, 170, 255, 0.45);
-    color: #d4d4ff;
+    background: rgba(232, 195, 150, 0.08);
+    border: 1px solid rgba(232, 195, 150, 0.5);
+    color: #e8c396;
     font-family: 'Cinzel', serif;
     font-size: 0.9em;
     letter-spacing: 1px;
@@ -756,9 +761,9 @@ body::after {
     transition: all 0.3s ease;
 }
 .footer-social:hover {
-    background: rgba(180, 170, 255, 0.16);
-    border-color: #d4d4ff;
-    box-shadow: 0 0 18px rgba(180, 170, 255, 0.45);
+    background: rgba(232, 195, 150, 0.16);
+    border-color: #e8c396;
+    box-shadow: 0 0 18px rgba(232, 195, 150, 0.35);
     transform: translateY(-2px);
     text-shadow: none;
 }
