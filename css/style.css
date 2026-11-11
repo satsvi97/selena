@@ -252,6 +252,12 @@ code { background: rgba(180, 170, 255, 0.15); padding: 2px 6px; border-radius: 4
     grid-template-columns: repeat(auto-fit, minmax(300px, 360px));
     justify-content: center;
 }
+@media (min-width: 769px) {
+    #themes-grid .card,
+    #extensions-grid .card {
+        min-height: 476px;
+    }
+}
 
 /* ====== ТЕГИ ====== */
 .bot-tags, .theme-tags, .ext-tags {
