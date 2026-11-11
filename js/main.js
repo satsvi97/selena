@@ -112,40 +112,42 @@ function initLightbox() {
     });
 }
 
-// Кнопка «Установить»: копируем URL расширения в буфер обмена
+// Кнопки «Установить/Скопировать ссылку»: копируем URL в буфер обмена
 function initCopyInstall() {
-    const btn = document.querySelector('.ext-install[data-copy]');
-    if (!btn) return;
-    const url = btn.getAttribute('data-copy');
+    const buttons = document.querySelectorAll('[data-copy]');
+    if (!buttons.length) return;
 
-    btn.addEventListener('click', async (e) => {
-        e.preventDefault();
-        const restoreText = btn.textContent;
-        try {
-            if (navigator.clipboard && window.isSecureContext) {
-                await navigator.clipboard.writeText(url);
-            } else {
-                // Фоллбек для старых браузеров
-                const ta = document.createElement('textarea');
-                ta.value = url;
-                ta.setAttribute('readonly', '');
-                ta.style.position = 'fixed';
-                ta.style.opacity = '0';
-                document.body.appendChild(ta);
-                ta.select();
-                document.execCommand('copy');
-                ta.remove();
+    buttons.forEach((btn) => {
+        const url = btn.getAttribute('data-copy');
+        btn.addEventListener('click', async (e) => {
+            e.preventDefault();
+            const restoreText = btn.textContent;
+            try {
+                if (navigator.clipboard && window.isSecureContext) {
+                    await navigator.clipboard.writeText(url);
+                } else {
+                    // Фоллбек для старых браузеров
+                    const ta = document.createElement('textarea');
+                    ta.value = url;
+                    ta.setAttribute('readonly', '');
+                    ta.style.position = 'fixed';
+                    ta.style.opacity = '0';
+                    document.body.appendChild(ta);
+                    ta.select();
+                    document.execCommand('copy');
+                    ta.remove();
+                }
+                btn.classList.add('is-copied');
+                btn.textContent = '✓';
+                setTimeout(() => {
+                    btn.classList.remove('is-copied');
+                    btn.textContent = restoreText;
+                }, 1500);
+            } catch (err) {
+                // Если копирование недоступно — открываем ссылку
+                window.open(url, '_blank', 'noopener');
             }
-            btn.classList.add('is-copied');
-            btn.textContent = '✓';
-            setTimeout(() => {
-                btn.classList.remove('is-copied');
-                btn.textContent = restoreText;
-            }, 1500);
-        } catch (err) {
-            // Если копирование недоступно — открываем ссылку
-            window.open(url, '_blank', 'noopener');
-        }
+        });
     });
 }
 
