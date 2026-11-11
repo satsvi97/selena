@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg?v=3">
+    <link rel="icon" type="image/png" sizes="64x64" href="img/favicon-64.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon-180.png">
     <meta name="theme-color" content="#0d0914">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title data-i18n="page.index.title">Selena's Tavern | Эфирная Луна</title>
@@ -115,7 +117,7 @@
                         <p data-i18n-html="ext.scene.desc">Панель сцены: календарь, место, время, погода, кто рядом, открытые нити. ИИ обновляет тегом <code>[[scene: ...]]</code>.</p>
                         <div class="ext-links">
                             <a href="https://github.com/satsvi97/scene-panel" target="_blank" class="btn" data-i18n="btn.github">GitHub</a>
-                            <button class="btn ext-install" data-ext="scene-panel" data-i18n="btn.install">Установить</button>
+                            <button class="btn ext-install" data-ext="scene-panel" data-copy="https://github.com/satsvi97/scene-panel" data-i18n="btn.install">Установить</button>
                         </div>
                         <div class="ext-tags">
                             <span class="tag" data-i18n="tag.sillytavern">SillyTavern</span>
@@ -125,20 +127,20 @@
                     </div>
                     <div class="card ext-card" data-ext="lorbook-sync">
                         <div class="ext-icon">📚</div>
-                        <h3 data-i18n="ext.lore.title">Lorebook Sync (планируется)</h3>
-                        <p data-i18n="ext.lore.desc">Синхронизация лорбуков между чатами и экспорт в Notion/Obsidian.</p>
+                        <h3 data-i18n="ext.lore.title">Lorebook Sync</h3>
+                        <p data-i18n="ext.lore.desc">Синхронизация лорбуков, персонажей, персон и чатов с Notion — у каждой категории своя база.</p>
                         <div class="ext-links">
-                            <button class="btn" disabled data-i18n="btn.soon">Скоро</button>
+                            <a href="https://github.com/satsvi97/lorebook-sync" target="_blank" class="btn" data-i18n="btn.github">GitHub</a>
+                            <button class="btn ext-install" data-ext="lorbook-sync" data-i18n="btn.install">Установить</button>
                         </div>
                         <div class="ext-tags">
-                            <span class="tag" data-i18n="tag.wip">WIP</span>
-                            <span class="tag" data-i18n="tag.lorebook">Lorebook</span>
+                            <span class="tag" data-i18n="tag.sillytavern">SillyTavern</span>
                         </div>
                     </div>
-                    <div class="card ext-card empty" data-ext="new">
-                        <div class="empty-icon">+</div>
+                    <div class="card ext-card empty" data-ext="wip">
+                        <div class="empty-icon">⏳</div>
                         <h3 data-i18n="ext.new.title">Новое расширение</h3>
-                        <p data-i18n="ext.new.desc">Есть идея? Напиши мне.</p>
+                        <p data-i18n="ext.new.desc">Работа в процессе...</p>
                     </div>
                 </div>
             </section>
