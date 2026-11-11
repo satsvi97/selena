@@ -73,7 +73,12 @@ const I18N = {
     "ilion.lore.factions.title": "Фракции",
     "ilion.lore.factions.desc": "Караванщики, лунный двор, хранители гробниц — у каждого свой интерес.",
     "footer.telegram": "Мой Telegram",
-    "footer.made": "Сделано с любовью"
+    "footer.github": "GitHub",
+    "footer.made": "автор",
+    "tag.extension": "Расширение",
+    "btn.copyLink": "Скопировать ссылку",
+    "theme.devils.desc": "Шесть книжных режимов по серии «Ночь Дьявола» Пенелопы Дуглас: Corrupt, Hideaway, Kill Switch, Nightfall, Conclave и Punk 57. Один CSS-движок, переключение на лету.",
+    "theme.devils.note": "Устанавливается как расширение SillyTavern: Extensions → Install extension → вставить ссылку."
   },
 
   en: {
@@ -149,7 +154,12 @@ const I18N = {
     "ilion.lore.factions.title": "Factions",
     "ilion.lore.factions.desc": "Caravaneers, the moon court, tomb keepers — each has their own interest.",
     "footer.telegram": "My Telegram",
-    "footer.made": "Made with love"
+    "footer.github": "GitHub",
+    "footer.made": "by",
+    "tag.extension": "Extension",
+    "btn.copyLink": "Copy link",
+    "theme.devils.desc": "Six book modes for Penelope Douglas' Devil's Night series: Corrupt, Hideaway, Kill Switch, Nightfall, Conclave and Punk 57. One CSS engine, switch on the fly.",
+    "theme.devils.note": "Installs as a SillyTavern extension: Extensions → Install extension → paste the link."
   },
 
   uk: {
@@ -225,7 +235,12 @@ const I18N = {
     "ilion.lore.factions.title": "Фракції",
     "ilion.lore.factions.desc": "Караванники, місячний двір, охоронці гробниць — у кожного свій інтерес.",
     "footer.telegram": "Мій Telegram",
-    "footer.made": "Зроблено з любов'ю"
+    "footer.github": "GitHub",
+    "footer.made": "автор",
+    "tag.extension": "Розширення",
+    "btn.copyLink": "Скопіювати посилання",
+    "theme.devils.desc": "Шість книжкових режимів за серією «Ніч Диявола» Пенелопи Дуглас: Corrupt, Hideaway, Kill Switch, Nightfall, Conclave і Punk 57. Один CSS-движок, перемикання на льоту.",
+    "theme.devils.note": "Встановлюється як розширення SillyTavern: Extensions → Install extension → вставити посилання."
   },
 
   sv: {
@@ -301,7 +316,12 @@ const I18N = {
     "ilion.lore.factions.title": "Fraktioner",
     "ilion.lore.factions.desc": "Karavanförare, månhovet, gravvårdare — var och en har sitt intresse.",
     "footer.telegram": "Min Telegram",
-    "footer.made": "Skapat med kärlek"
+    "footer.github": "GitHub",
+    "footer.made": "av",
+    "tag.extension": "Tillägg",
+    "btn.copyLink": "Kopiera länk",
+    "theme.devils.desc": "Sex boklägen för Penelope Douglas serie Devil's Night: Corrupt, Hideaway, Kill Switch, Nightfall, Conclave och Punk 57. En CSS-motor, byte direkt.",
+    "theme.devils.note": "Installeras som ett SillyTavern-tillägg: Extensions → Install extension → klistra in länken."
   }
 };
 
