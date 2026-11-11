@@ -30,8 +30,8 @@ const I18N = {
     "tag.sillytavern": "SillyTavern",
     "tag.rptools": "RP Tools",
     "tag.mit": "MIT",
-    "ext.lore.title": "Lorebook Sync (планируется)",
-    "ext.lore.desc": "Синхронизация лорбуков между чатами и экспорт в Notion/Obsidian.",
+    "ext.lore.title": "Lorebook Sync",
+    "ext.lore.desc": "Синхронизация лорбуков, персонажей, персон и чатов с Notion — у каждой категории своя база.",
     "btn.soon": "Скоро",
     "tag.wip": "WIP",
     "tag.lorebook": "Lorebook",
@@ -71,7 +71,9 @@ const I18N = {
     "ilion.lore.magic.title": "Магия песков",
     "ilion.lore.magic.desc": "Искусство читать следы и повелевать дюнами. Плата за неё всегда высока.",
     "ilion.lore.factions.title": "Фракции",
-    "ilion.lore.factions.desc": "Караванщики, лунный двор, хранители гробниц — у каждого свой интерес."
+    "ilion.lore.factions.desc": "Караванщики, лунный двор, хранители гробниц — у каждого свой интерес.",
+    "footer.telegram": "Мой Telegram",
+    "footer.made": "Сделано с любовью"
   },
 
   en: {
@@ -104,8 +106,8 @@ const I18N = {
     "tag.sillytavern": "SillyTavern",
     "tag.rptools": "RP Tools",
     "tag.mit": "MIT",
-    "ext.lore.title": "Lorebook Sync (planned)",
-    "ext.lore.desc": "Sync lorebooks between chats and export to Notion/Obsidian.",
+    "ext.lore.title": "Lorebook Sync",
+    "ext.lore.desc": "Sync lorebooks, characters, personas and chats to Notion — each category gets its own database.",
     "btn.soon": "Coming soon",
     "tag.wip": "WIP",
     "tag.lorebook": "Lorebook",
@@ -145,7 +147,9 @@ const I18N = {
     "ilion.lore.magic.title": "Sand Magic",
     "ilion.lore.magic.desc": "The art of reading traces and commanding dunes. Its price is always high.",
     "ilion.lore.factions.title": "Factions",
-    "ilion.lore.factions.desc": "Caravaneers, the moon court, tomb keepers — each has their own interest."
+    "ilion.lore.factions.desc": "Caravaneers, the moon court, tomb keepers — each has their own interest.",
+    "footer.telegram": "My Telegram",
+    "footer.made": "Made with love"
   },
 
   uk: {
@@ -219,7 +223,9 @@ const I18N = {
     "ilion.lore.magic.title": "Магія пісків",
     "ilion.lore.magic.desc": "Мистецтво читати сліди й керувати дюнами. Плата за неї завжди висока.",
     "ilion.lore.factions.title": "Фракції",
-    "ilion.lore.factions.desc": "Караванники, місячний двір, охоронці гробниць — у кожного свій інтерес."
+    "ilion.lore.factions.desc": "Караванники, місячний двір, охоронці гробниць — у кожного свій інтерес.",
+    "footer.telegram": "Мій Telegram",
+    "footer.made": "Зроблено з любов'ю"
   },
 
   sv: {
@@ -252,8 +258,8 @@ const I18N = {
     "tag.sillytavern": "SillyTavern",
     "tag.rptools": "RP Tools",
     "tag.mit": "MIT",
-    "ext.lore.title": "Lorebook Sync (planerad)",
-    "ext.lore.desc": "Synkronisera lorebooks mellan chattar och exportera till Notion/Obsidian.",
+    "ext.lore.title": "Lorebook Sync",
+    "ext.lore.desc": "Synkronisera lorebooks, karaktärer, personer och chattar med Notion — varje kategori får en egen databas.",
     "btn.soon": "Kommer snart",
     "tag.wip": "WIP",
     "tag.lorebook": "Lorebook",
@@ -293,7 +299,9 @@ const I18N = {
     "ilion.lore.magic.title": "Sandmagi",
     "ilion.lore.magic.desc": "Konsten att läsa spår och befalla dyner. Priset är alltid högt.",
     "ilion.lore.factions.title": "Fraktioner",
-    "ilion.lore.factions.desc": "Karavanförare, månhovet, gravvårdare — var och en har sitt intresse."
+    "ilion.lore.factions.desc": "Karavanförare, månhovet, gravvårdare — var och en har sitt intresse.",
+    "footer.telegram": "Min Telegram",
+    "footer.made": "Skapat med kärlek"
   }
 };
 
