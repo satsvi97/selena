@@ -373,6 +373,44 @@ code { background: rgba(180, 170, 255, 0.15); padding: 2px 6px; border-radius: 4
     pointer-events: none;
 }
 
+/* ====== БЕЙДЖ «УСТАНАВЛИВАЕТСЯ КАК РАСШИРЕНИЕ» ====== */
+.theme-note {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    text-align: left;
+    font-size: 0.8em;
+    line-height: 1.4;
+    color: #e8c396;
+    background: rgba(232, 195, 150, 0.1);
+    border: 1px solid rgba(232, 195, 150, 0.35);
+    border-radius: 8px;
+    padding: 8px 10px;
+    margin: 12px 0;
+}
+.theme-note-icon {
+    flex: 0 0 auto;
+    line-height: 1.2;
+}
+.theme-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: auto;
+}
+.theme-actions .btn {
+    flex: 1 1 140px;
+    min-width: 0;
+    padding: 10px 14px;
+    font-size: 0.9em;
+    letter-spacing: 0.5px;
+}
+.tag--accent {
+    color: #e8c396;
+    border-color: rgba(232, 195, 150, 0.6);
+    background: rgba(232, 195, 150, 0.12);
+}
+
 /* ====== ЛАЙТБОКС ====== */
 body.lightbox-open {
     overflow: hidden;
@@ -678,6 +716,12 @@ body::after {
     align-items: center;
     gap: 14px;
     text-align: center;
+}
+.footer-socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
 }
 .footer-social {
     display: inline-flex;
