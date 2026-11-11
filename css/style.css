@@ -470,6 +470,12 @@ body.lightbox-open {
     background: rgba(180, 170, 255, 0.15);
     border-color: rgba(180, 170, 255, 0.5);
 }
+.ext-install.is-copied {
+    background: rgba(232, 195, 150, 0.14) !important;
+    border-color: #e8c396 !important;
+    color: #e8c396 !important;
+    box-shadow: 0 0 18px rgba(232, 195, 150, 0.45) !important;
+}
 
 /* ====== СЕКЦИЯ ИЛИОН / ОБО МНЕ ====== */
 .about-me {
