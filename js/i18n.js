@@ -12,7 +12,7 @@ const I18N = {
     "nav.ilion": "Илион",
 
     "about.title": "Обо мне",
-    "about.text": "Привет! Я Селена — ведьма с болот, родом из Киева, а теперь живу на юге Швеции с псом Бруно и кошкой Луной. Уже пару лет увлекаюсь ИИ и ролевыми играми: делаю темы и расширения для SillyTavern, а скоро выпущу первое расширение. Мой мир — это луна, пустыня и пески времени: всё началось с ролевой по ACOTAR, а выросло в собственную космологию, мифологию и целый мир. Эстетика песка и луны ведёт к Илиону — древнему городу из моих историй. Здесь я делюсь темами, расширениями и ботами для Таверны. 🖤🌙",
+    "about.text": "Привет! Я Селена — родом из Киева, а теперь живу на юге Швеции с псом Бруно и кошкой Луной. Уже пару лет увлекаюсь ИИ и ролевыми играми: делаю темы и расширения для SillyTavern, а скоро выпущу первое расширение. Мой мир — это луна, пустыня и пески времени: всё началось с ролевой по ACOTAR, а выросло в собственную космологию, мифологию и целый мир. Эстетика песка и луны ведёт к Илиону — древнему городу из моих историй. Здесь я делюсь темами, расширениями и ботами для Таверны. 🖤🌙",
 
     "themes.title": "Мои Темы",
     "themes.subtitle": "Темы оформления для SillyTavern — от тёмных фэнтези до уютных таверн.",
@@ -86,7 +86,7 @@ const I18N = {
     "nav.ilion": "Ilion",
 
     "about.title": "About Me",
-    "about.text": "Hi! I'm Selena — a swamp witch originally from Kyiv, now living in southern Sweden with my dog Bruno and cat Luna. I've been into AI and roleplay for a couple of years: I make themes and extensions for SillyTavern, and my first extension is coming soon. My world is moon, desert and sands of time: it began with an ACOTAR roleplay and grew into my own cosmology, mythology and a whole world. The sand-and-moon aesthetic leads to Ilion, an ancient city from my stories. Here I share my themes, extensions and bots for the Tavern. 🖤🌙",
+    "about.text": "Hi! I'm Selena — originally from Kyiv, now living in southern Sweden with my dog Bruno and cat Luna. I've been into AI and roleplay for a couple of years: I make themes and extensions for SillyTavern, and my first extension is coming soon. My world is moon, desert and sands of time: it began with an ACOTAR roleplay and grew into my own cosmology, mythology and a whole world. The sand-and-moon aesthetic leads to Ilion, an ancient city from my stories. Here I share my themes, extensions and bots for the Tavern. 🖤🌙",
 
     "themes.title": "My Themes",
     "themes.subtitle": "SillyTavern themes — from dark fantasy to cozy taverns.",
@@ -160,7 +160,7 @@ const I18N = {
     "nav.ilion": "Іліон",
 
     "about.title": "Про мене",
-    "about.text": "Привіт! Я Селена — відьма з боліт, родом з Києва, а зараз живу на півдні Швеції з псом Бруно та кішкою Луною. Уже кілька років захоплююся ШІ та рольовими іграми: роблю теми й розширення для SillyTavern, а скоро випущу перше розширення. Мій світ — це місяць, пустеля й піски часу: усе почалося з рольової гри за ACOTAR, а виросло у власну космологію, міфологію та цілий світ. Естетика піску й місяця веде до Іліону — давнього міста з моїх історій. Тут я ділюся темами, розширеннями та ботами для Таверни. 🖤🌙",
+    "about.text": "Привіт! Я Селена — родом з Києва, а зараз живу на півдні Швеції з псом Бруно та кішкою Луною. Уже кілька років захоплююся ШІ та рольовими іграми: роблю теми й розширення для SillyTavern, а скоро випущу перше розширення. Мій світ — це місяць, пустеля й піски часу: усе почалося з рольової гри за ACOTAR, а виросло у власну космологію, міфологію та цілий світ. Естетика піску й місяця веде до Іліону — давнього міста з моїх історій. Тут я ділюся темами, розширеннями та ботами для Таверни. 🖤🌙",
 
     "themes.title": "Мої Теми",
     "themes.subtitle": "Теми оформлення для SillyTavern — від темного фентезі до затишних таверн.",
@@ -234,7 +234,7 @@ const I18N = {
     "nav.ilion": "Ilion",
 
     "about.title": "Om Mig",
-    "about.text": "Hej! Jag är Selena — en träskhäxa från Kyiv, nu bosatt i södra Sverige med min hund Bruno och katt Luna. Jag har varit inne på AI och rollspel i ett par år: jag gör teman och tillägg för SillyTavern, och mitt första tillägg släpps snart. Min värld är måne, öken och tidens sand: allt började med ett ACOTAR-rollspel och växte till min egen kosmologi, mytologi och en hel värld. Sandens och månens estetik leder till Ilion, en uråldrig stad från mina berättelser. Här delar jag mina teman, tillägg och botar för Tavernan. 🖤🌙",
+    "about.text": "Hej! Jag är Selena — från Kyiv, nu bosatt i södra Sverige med min hund Bruno och katt Luna. Jag har varit inne på AI och rollspel i ett par år: jag gör teman och tillägg för SillyTavern, och mitt första tillägg släpps snart. Min värld är måne, öken och tidens sand: allt började med ett ACOTAR-rollspel och växte till min egen kosmologi, mytologi och en hel värld. Sandens och månens estetik leder till Ilion, en uråldrig stad från mina berättelser. Här delar jag mina teman, tillägg och botar för Tavernan. 🖤🌙",
 
     "themes.title": "Mina Teman",
     "themes.subtitle": "SillyTavern-teman — från mörk fantasy till mysiga tavernor.",
