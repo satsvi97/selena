@@ -34,6 +34,7 @@
         <a href="#about" class="scroll-nav__dot" data-label="Обо мне"></a>
         <a href="#themes" class="scroll-nav__dot" data-label="Темы"></a>
         <a href="#extensions" class="scroll-nav__dot" data-label="Расширения"></a>
+        <a href="#lorebooks" class="scroll-nav__dot" data-label="Лорбуки"></a>
         <a href="#bots" class="scroll-nav__dot" data-label="Боты"></a>
     </nav>
 
@@ -48,6 +49,7 @@
         <nav class="nav-menu">
             <a href="#themes" class="btn"><span aria-hidden="true">🎨</span> <span data-i18n="nav.themes">Мои Темы</span></a>
             <a href="#extensions" class="btn"><span aria-hidden="true">⚙️</span> <span data-i18n="nav.extensions">Мои Расширения</span></a>
+            <a href="#lorebooks" class="btn"><span aria-hidden="true">📚</span> <span data-i18n="nav.lorebooks">Мои Лорбуки</span></a>
             <a href="#bots" class="btn"><span aria-hidden="true">🤖</span> <span data-i18n="nav.bots">Мои Боты</span></a>
             <a href="ilion.html" class="btn"><span aria-hidden="true">⏳</span> <span data-i18n="nav.ilion">Илион</span></a>
         </nav>
@@ -160,6 +162,24 @@
                 </div>
             </section>
 
+            <!-- ====== МОИ ЛОРБУКИ ====== -->
+            <section id="lorebooks" style="margin-top: 60px;">
+                <h2 style="text-align: center;"><span aria-hidden="true">📚</span> <span data-i18n="lorebooks.title">Мои Лорбуки</span></h2>
+                <p style="text-align: center; color: #b8b8ff; margin-bottom: 30px;" data-i18n="lorebooks.subtitle">Лорбуки и миры для SillyTavern — персонажи, локации, события и правила.</p>
+                <div class="card-grid" id="lorebooks-grid">
+                    <div class="card empty" data-lorebook="new">
+                        <div class="empty-icon">📖</div>
+                        <h3 data-i18n="lorebooks.soon.title">Скоро...</h3>
+                        <p data-i18n="lorebooks.soon.desc">Первый лорбук уже на подходе.</p>
+                    </div>
+                    <div class="card empty" data-lorebook="new">
+                        <div class="empty-icon">📖</div>
+                        <h3 data-i18n="lorebooks.soon.title">Скоро...</h3>
+                        <p data-i18n="lorebooks.soon.desc">Первый лорбук уже на подходе.</p>
+                    </div>
+                </div>
+            </section>
+
             <!-- ====== МОИ БОТЫ ====== -->
             <section id="bots" style="margin-top: 60px;">
                 <h2 style="text-align: center;"><span aria-hidden="true">🤖</span> <span data-i18n="bots.title">Мои Боты</span></h2>
@@ -214,7 +234,7 @@
     
     <script>
     // Активная точка в плавающей навигации при скролле
-    const sections = ['about', 'themes', 'extensions', 'bots'];
+    const sections = ['about', 'themes', 'extensions', 'lorebooks', 'bots'];
     const dots = document.querySelectorAll('.scroll-nav__dot');
     
     const observer = new IntersectionObserver((entries) => {
