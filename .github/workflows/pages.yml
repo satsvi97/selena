@@ -3,10 +3,13 @@ name: Deploy static site to Pages
 on:
   push:
     branches: [main]
+  # Ежедневная пересборка: подтягивает свежий лорбук из его репозитория
+  schedule:
+    - cron: "17 4 * * *"
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -28,6 +31,32 @@ jobs:
         run: |
           mkdir -p _site
           rsync -av --exclude='.git' --exclude='.github' --exclude='_site' ./ _site/
+
+      - name: Sync lorebook JSON
+        run: |
+          url="https://raw.githubusercontent.com/satsvi97/devils-night-lorebook/main/devils-night-lorebook.json"
+          tmp="$(mktemp)"
+          if curl -fsSL "$url" -o "$tmp" && python3 -c "import json,sys; json.load(open(sys.argv[1], encoding='utf-8'))" "$tmp"; then
+            cp "$tmp" _site/files/devils-night-lorebook.json
+            echo "Lorebook downloaded from devils-night-lorebook."
+          else
+            echo "::warning::Lorebook download failed or JSON is invalid — using the copy committed in this repo."
+            cp files/devils-night-lorebook.json _site/files/devils-night-lorebook.json
+          fi
+
+      - name: Keep repo copy in sync
+        if: github.event_name != 'push'
+        run: |
+          cp _site/files/devils-night-lorebook.json files/devils-night-lorebook.json
+          if git diff --quiet -- files/devils-night-lorebook.json; then
+            echo "Already up to date."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add files/devils-night-lorebook.json
+          git commit -m "Sync lorebook JSON from devils-night-lorebook"
+          git push
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
