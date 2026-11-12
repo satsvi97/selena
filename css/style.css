@@ -539,6 +539,39 @@ body.lightbox-open {
     font-size: 1.4em;
     letter-spacing: 2px;
 }
+.age-badge {
+    display: inline-block;
+    margin-left: 4px;
+    padding: 2px 7px;
+    border-radius: 6px;
+    background: rgba(255, 70, 90, 0.16);
+    border: 1px solid rgba(255, 90, 110, 0.65);
+    color: #ff6b81;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    vertical-align: middle;
+}
+.lorebook-subtitle {
+    margin: -4px 0 10px;
+    font-family: 'Cinzel', serif;
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    color: #b8b8ff;
+    opacity: 0.8;
+}
+.lorebook-note {
+    font-size: 0.75em;
+    line-height: 1.4;
+    color: #c8b8dc;
+    background: rgba(180, 170, 255, 0.08);
+    border: 1px solid rgba(180, 170, 255, 0.25);
+    border-radius: 8px;
+    padding: 7px 9px;
+    margin: 8px 0;
+    text-align: left;
+}
 .ext-links {
     display: flex;
     gap: 10px;
@@ -562,16 +595,6 @@ body.lightbox-open {
     border-color: #e8c396 !important;
     color: #e8c396 !important;
     box-shadow: 0 0 18px rgba(232, 195, 150, 0.45) !important;
-}
-
-/* ====== ЛОРБУКИ ====== */
-.lorebook-card h3 {
-    margin-bottom: 6px;
-}
-.lorebook-card img {
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    object-position: center 42%;
 }
 
 /* ====== СЕКЦИЯ ИЛИОН / ОБО МНЕ ====== */
