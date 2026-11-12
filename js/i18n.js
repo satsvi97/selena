@@ -9,6 +9,7 @@ const I18N = {
     "nav.themes": "Мои Темы",
     "nav.extensions": "Мои Расширения",
     "nav.bots": "Мои Боты",
+    "nav.lorebooks": "Мои Лорбуки",
     "nav.ilion": "Илион",
 
     "about.title": "Обо мне",
@@ -42,6 +43,11 @@ const I18N = {
     "bots.subtitle": "Персонажи для SillyTavern. Пока пусто — наполняю по мере готовности.",
     "bots.soon.title": "Скоро...",
     "bots.soon.desc": "Новые персонажи появятся здесь.",
+
+    "lorebooks.title": "Мои Лорбуки",
+    "lorebooks.subtitle": "Лорбуки и миры для SillyTavern — персонажи, локации, события и правила.",
+    "lorebooks.soon.title": "Скоро...",
+    "lorebooks.soon.desc": "Первый лорбук уже на подходе.",
 
     "ilion.h1": "Илион",
     "ilion.tagline": "Мир песков времени, древних руин и луны, что никогда не заходит.",
@@ -90,6 +96,7 @@ const I18N = {
     "nav.themes": "My Themes",
     "nav.extensions": "My Extensions",
     "nav.bots": "My Bots",
+    "nav.lorebooks": "My Lorebooks",
     "nav.ilion": "Ilion",
 
     "about.title": "About Me",
@@ -123,6 +130,11 @@ const I18N = {
     "bots.subtitle": "SillyTavern characters. Empty for now — I'll add them as they're ready.",
     "bots.soon.title": "Coming soon...",
     "bots.soon.desc": "New characters will appear here.",
+
+    "lorebooks.title": "My Lorebooks",
+    "lorebooks.subtitle": "Lorebooks and worlds for SillyTavern — characters, locations, events and rules.",
+    "lorebooks.soon.title": "Coming soon...",
+    "lorebooks.soon.desc": "The first lorebook is on its way.",
 
     "ilion.h1": "Ilion",
     "ilion.tagline": "A world of sands of time, ancient ruins and a moon that never sets.",
@@ -171,6 +183,7 @@ const I18N = {
     "nav.themes": "Мої Теми",
     "nav.extensions": "Мої Розширення",
     "nav.bots": "Мої Боти",
+    "nav.lorebooks": "Мої Лорбуки",
     "nav.ilion": "Іліон",
 
     "about.title": "Про мене",
@@ -204,6 +217,11 @@ const I18N = {
     "bots.subtitle": "Персонажі для SillyTavern. Поки порожньо — додаю в міру готовності.",
     "bots.soon.title": "Скоро...",
     "bots.soon.desc": "Нові персонажі з'являться тут.",
+
+    "lorebooks.title": "Мої Лорбуки",
+    "lorebooks.subtitle": "Лорбуки та світи для SillyTavern — персонажі, локації, події та правила.",
+    "lorebooks.soon.title": "Скоро...",
+    "lorebooks.soon.desc": "Перший лорбук уже на підході.",
 
     "ilion.h1": "Іліон",
     "ilion.tagline": "Світ пісків часу, давніх руїн і місяця, що ніколи не заходить.",
@@ -252,6 +270,7 @@ const I18N = {
     "nav.themes": "Mina Teman",
     "nav.extensions": "Mina Tillägg",
     "nav.bots": "Mina Botar",
+    "nav.lorebooks": "Mina Lorebooks",
     "nav.ilion": "Ilion",
 
     "about.title": "Om Mig",
@@ -285,6 +304,11 @@ const I18N = {
     "bots.subtitle": "SillyTavern-karaktärer. Tomt just nu — jag fyller på när de är klara.",
     "bots.soon.title": "Kommer snart...",
     "bots.soon.desc": "Nya karaktärer dyker upp här.",
+
+    "lorebooks.title": "Mina Lorebooks",
+    "lorebooks.subtitle": "Lorebooks och världar för SillyTavern — karaktärer, platser, händelser och regler.",
+    "lorebooks.soon.title": "Kommer snart...",
+    "lorebooks.soon.desc": "Den första lorebooken är på väg.",
 
     "ilion.h1": "Ilion",
     "ilion.tagline": "En värld av tidens sand, uråldriga ruiner och en måne som aldrig går ner.",
