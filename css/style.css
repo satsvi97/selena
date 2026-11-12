@@ -249,13 +249,15 @@ code { background: rgba(180, 170, 255, 0.15); padding: 2px 6px; border-radius: 4
 
 /* Темы: одна карточка — по центру, аккуратного размера */
 #themes-grid,
-#extensions-grid {
+#extensions-grid,
+#lorebooks-grid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 360px));
     justify-content: center;
 }
 @media (min-width: 769px) {
     #themes-grid .card,
-    #extensions-grid .card {
+    #extensions-grid .card,
+    #lorebooks-grid .card {
         min-height: 476px;
     }
 }
