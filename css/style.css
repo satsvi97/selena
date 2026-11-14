@@ -260,6 +260,11 @@ code { background: rgba(180, 170, 255, 0.15); padding: 2px 6px; border-radius: 4
     #lorebooks-grid .card {
         min-height: 476px;
     }
+    /* в темах высоту задаёт содержимое: у карточек с превью она и так большая,
+       а короткая карточка не растягивается пустотой */
+    #themes-grid .card {
+        min-height: 0;
+    }
 }
 
 /* ====== ТЕГИ ====== */
