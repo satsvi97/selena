@@ -16,7 +16,6 @@
 <body>
 
     <div id="particles-js"></div>
-    <img src="img/chuviha.png" class="floating-char" alt="Selena">
 
     <!-- Переключатель языка -->
     <div class="lang-switch" role="group" aria-label="Language">
@@ -39,14 +38,53 @@
     </nav>
 
     <div class="container">
-        <header>
-            <h1>✦ Selena's Tavern ✦</h1>
-            <p style="text-align: center; color: #b8b8ff; font-style: italic;" data-i18n="tagline">
-                Погрузись в мир, где песок времени встречается с лунным светом.
-            </p>
-        </header>
+        <!-- ====== ОБЛОЖКА ====== -->
+        <section class="cover" id="about" aria-labelledby="cover-title">
+            <p class="cover__archive" data-i18n="cover.archive">Selena's Tavern / Character Archive</p>
 
-        <nav class="nav-menu">
+            <div class="cover__stage">
+                <div class="cover__panel">
+                    <p class="cover__kicker" data-i18n="cover.kicker">✦ Лунный архив / Обо мне</p>
+                    <p class="cover__eyebrow" data-i18n="cover.eyebrow">Темы · Расширения · Лорбуки · Боты</p>
+
+                    <h1 class="cover__title" id="cover-title" data-i18n="cover.title">Мир, персонажи и хаос.</h1>
+
+                    <p class="cover__intro" data-i18n="tagline">Погрузись в мир, где песок времени встречается с лунным светом.</p>
+
+                    <p class="cover__contact">
+                        <span data-i18n="cover.contactLabel">Telegram</span>:
+                        <a href="https://t.me/selenatavern" target="_blank" rel="noopener noreferrer">@selenatavern</a>
+                    </p>
+
+                    <div class="cover__accordions">
+                        <details class="cover__acc">
+                            <summary data-i18n="about.title">Обо мне</summary>
+                            <div class="cover__acc-body" data-i18n="about.text">Привет! Я Селена — родом из Киева, а теперь живу на юге Швеции с псом Бруно и кошкой Луной.</div>
+                        </details>
+
+                        <details class="cover__acc">
+                            <summary data-i18n="cover.acc2">Telegram-канал</summary>
+                            <div class="cover__acc-body" data-i18n-html="cover.acc2.text">
+                                Обновления, скриншоты и то, что ещё в работе — в канале <a href="https://t.me/selenatavern" target="_blank" rel="noopener noreferrer">@selenatavern</a>.
+                            </div>
+                        </details>
+
+                        <details class="cover__acc">
+                            <summary data-i18n="cover.acc3">Избранное</summary>
+                            <div class="cover__acc-body" data-i18n-html="cover.acc3.text">
+                                <a href="#themes">Moonlit Tavern</a> — полная перерисовка интерфейса.
+                            </div>
+                        </details>
+                    </div>
+                </div>
+
+                <div class="cover__art">
+                    <img src="img/Jag.png" alt="Selena with Bruno the dog and Luna the cat" width="460" height="460">
+                </div>
+            </div>
+        </section>
+
+        <nav class="nav-menu nav-menu--tabs" aria-label="Разделы">
             <a href="#themes" class="btn"><span aria-hidden="true">🎨</span> <span data-i18n="nav.themes">Мои Темы</span></a>
             <a href="#extensions" class="btn"><span aria-hidden="true">⚙️</span> <span data-i18n="nav.extensions">Мои Расширения</span></a>
             <a href="#lorebooks" class="btn"><span aria-hidden="true">📚</span> <span data-i18n="nav.lorebooks">Мои Лорбуки</span></a>
@@ -55,21 +93,6 @@
         </nav>
 
         <main>
-            <!-- ====== ОБО МНЕ ====== -->
-            <section id="about" style="margin-top: 40px;">
-                <div class="card about-me about-me--split">
-                    <div class="about-text">
-                        <h3 data-i18n="about.title">Обо мне</h3>
-                        <p style="color: #e6e6fa;" data-i18n="about.text">
-                            Привет! Я Селена — родом из Киева, а теперь живу на юге Швеции с псом Бруно и кошкой Луной. Уже пару лет увлекаюсь ИИ и ролевыми играми: делаю темы и расширения для SillyTavern, а скоро выпущу первое расширение. Мой мир — это луна, пустыня и пески времени: всё началось с ролевой по ACOTAR, а выросло в собственную космологию, мифологию и целый мир. Эстетика песка и луны ведёт к Илиону — древнему городу из моих историй. Здесь я делюсь темами, расширениями и ботами для Таверны. 🖤🌙
-                        </p>
-                    </div>
-                    <div class="about-photo">
-                        <img src="img/selena_monster.jpg" alt="Selena">
-                    </div>
-                </div>
-            </section>
-
             <!-- ====== МОИ ТЕМЫ ====== -->
             <section id="themes" style="margin-top: 50px;">
                 <h2 style="text-align: center;"><span aria-hidden="true">🎨</span> <span data-i18n="themes.title">Мои Темы</span></h2>
