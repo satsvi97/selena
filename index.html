@@ -17,6 +17,18 @@
 
     <div id="particles-js"></div>
 
+    <!-- Небо: фон с луной -->
+    <div class="sky" aria-hidden="true"></div>
+
+    <!-- Туман: при прокрутке плавно застилает луну -->
+    <div class="fog" aria-hidden="true"></div>
+
+    <!-- Облака: один раз заезжают слева направо при загрузке и останавливаются -->
+    <div class="clouds" aria-hidden="true">
+        <div class="clouds__layer clouds__layer--far"></div>
+        <div class="clouds__layer clouds__layer--near"></div>
+    </div>
+
     <!-- Переключатель языка -->
     <div class="lang-switch" role="group" aria-label="Language">
         <span class="lang-globe" aria-hidden="true">🌐</span>
@@ -55,6 +67,14 @@
                         <span data-i18n="cover.contactLabel">Telegram</span>:
                         <a href="https://t.me/selenatavern" target="_blank" rel="noopener noreferrer">@selenatavern</a>
                     </p>
+                </div>
+
+                <div class="cover__art">
+                    <img src="img/Jag.png" alt="Selena with Bruno the dog and Luna the cat" width="620" height="620">
+                </div>
+
+                <aside class="cover__panel cover__panel--info">
+                    <p class="cover__kicker" data-i18n="cover.info.kicker">✦ Подробнее</p>
 
                     <div class="cover__accordions">
                         <details class="cover__acc">
@@ -76,11 +96,38 @@
                             </div>
                         </details>
                     </div>
-                </div>
 
-                <div class="cover__art">
-                    <img src="img/Jag.png" alt="Selena with Bruno the dog and Luna the cat" width="460" height="460">
-                </div>
+                    <div class="cover__toc" aria-labelledby="cover-toc-kicker">
+                    <p class="cover__toc-kicker" id="cover-toc-kicker" data-i18n="cover.toc.kicker">✦ Содержание / Архив</p>
+                    <ul class="cover__toc-list">
+                        <li>
+                            <a href="#themes">
+                                <span class="cover__toc-name" data-i18n="nav.themes">Мои Темы</span>
+                                <span class="cover__toc-count" data-count="themes-grid">0</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#extensions">
+                                <span class="cover__toc-name" data-i18n="nav.extensions">Мои Расширения</span>
+                                <span class="cover__toc-count" data-count="extensions-grid">0</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#lorebooks">
+                                <span class="cover__toc-name" data-i18n="nav.lorebooks">Мои Лорбуки</span>
+                                <span class="cover__toc-count" data-count="lorebooks-grid">0</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#bots">
+                                <span class="cover__toc-name" data-i18n="nav.bots">Мои Боты</span>
+                                <span class="cover__toc-count" data-count="bots-grid">0</span>
+                            </a>
+                        </li>
+                        </ul>
+                        <p class="cover__toc-updated"><span data-i18n="cover.toc.updated">Обновлено</span> <span id="cover-updated">—</span></p>
+                    </div>
+                </aside>
             </div>
         </section>
 
@@ -91,6 +138,8 @@
             <a href="#bots" class="btn"><span aria-hidden="true">🤖</span> <span data-i18n="nav.bots">Мои Боты</span></a>
             <a href="ilion.html" class="btn"><span aria-hidden="true">⏳</span> <span data-i18n="nav.ilion">Илион</span></a>
         </nav>
+
+        <div class="rule" aria-hidden="true"><span>✦</span></div>
 
         <main>
             <!-- ====== МОИ ТЕМЫ ====== -->
@@ -146,6 +195,7 @@
                         </div>
                     </div>
                     <div class="card theme-card" data-theme="moonlit-tavern">
+                        <img src="themes/Moonlit%20Tavern1.jpg" alt="Moonlit Tavern — тема для SillyTavern" loading="lazy">
                         <div class="theme-emblem" aria-hidden="true">🌙⌛️✨🦂</div>
                         <h3>Moonlit Tavern</h3>
                         <p data-i18n="theme.moonlit.desc">Глубокий фиолетовый, золото, частицы лунного света. Полная перерисовка интерфейса.</p>
@@ -269,7 +319,7 @@
     <!-- Футер -->
     <footer class="site-footer">
         <div class="footer-socials">
-            <a class="footer-social" href="https://t.me/+vJVPtuqeHu85ZjU6" target="_blank" rel="noopener noreferrer">
+            <a class="footer-social" href="https://t.me/selenatavern" target="_blank" rel="noopener noreferrer">
                 <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/>
                 </svg>
@@ -288,7 +338,6 @@
         </p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/i18n.js"></script>

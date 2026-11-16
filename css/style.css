@@ -1102,3 +1102,1244 @@ body::after {
     .nav-menu--tabs .btn { padding: 9px 12px; }
     .nav-menu--tabs .btn::after { display: none; }
 }
+
+/* ====== ОГЛАВЛЕНИЕ АРХИВА (правая колонка обложки) ====== */
+.cover__toc {
+    align-self: center;
+    padding: 22px 20px 16px;
+    border: 1px solid rgba(184, 184, 255, 0.12);
+    border-radius: 3px;
+    background: rgba(13, 9, 20, 0.5);
+}
+
+.cover__toc-kicker {
+    margin: 0 0 6px;
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: #e8c396;
+}
+
+.cover__toc-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.cover__toc-list li {
+    border-bottom: 1px solid rgba(184, 184, 255, 0.08);
+    transition: transform 0.2s ease;
+}
+.cover__toc-list li:last-child { border-bottom: 0; }
+.cover__toc-list li:hover { transform: translateX(3px); }
+
+.cover__toc-list a {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 11px 0;
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: #9a93cf;
+    text-shadow: none;
+    border: 0;
+}
+.cover__toc-list a:hover {
+    color: #f4e2c2;
+    text-shadow: none;
+}
+
+.cover__toc-count {
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0;
+    color: rgba(232, 195, 150, 0.75);
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+.cover__toc-list a:hover .cover__toc-count {
+    color: #f4e2c2;
+    text-shadow: 0 0 12px rgba(232, 195, 150, 0.6);
+}
+
+.cover__toc-updated {
+    margin: 14px 0 0;
+    padding-top: 12px;
+    border-top: 1px solid rgba(184, 184, 255, 0.08);
+    font-size: 0.58rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(169, 163, 216, 0.55);
+}
+
+@media screen and (max-width: 1180px) {
+    .cover__stage { grid-template-columns: minmax(0, 470px) minmax(0, 1fr); }
+
+    .cover__toc {
+        grid-column: 1 / -1;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 6px 24px;
+        padding: 14px 16px;
+        margin-top: 4px;
+    }
+    .cover__toc-kicker { margin: 0; }
+    .cover__toc-list { display: flex; flex-wrap: wrap; gap: 6px 24px; }
+    .cover__toc-list li { border-bottom: 0; }
+    .cover__toc-list li:hover { transform: none; }
+    .cover__toc-list a { padding: 3px 0; gap: 8px; }
+    .cover__toc-updated { margin: 0 0 0 auto; padding: 0; border-top: 0; }
+}
+
+@media screen and (max-width: 860px) {
+    .cover__toc { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .cover__toc-list { gap: 2px 18px; }
+    .cover__toc-updated { margin: 0; }
+}
+
+/* Обложке тесно в 1100px: выпускаем её из контейнера на 1240px,
+   табы держим на той же ширине, чтобы линия совпадала. */
+.cover,
+.nav-menu--tabs {
+    width: min(1440px, calc(100vw - 130px));
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+@media screen and (max-width: 1180px) and (min-width: 861px) {
+    .cover__stage { grid-template-columns: minmax(0, 460px) minmax(0, 1fr); }
+}
+
+@media screen and (max-width: 860px) {
+    .cover,
+    .nav-menu--tabs {
+        width: 100%;
+        margin-left: 0;
+        transform: none;
+    }
+    .cover__stage { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media screen and (max-width: 860px) {
+    .cover__toc-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 18px;
+        width: 100%;
+    }
+}
+
+
+/* ====== ПРАВАЯ КОЛОНКА: подробнее + содержание ====== */
+.cover__stage {
+    grid-template-columns: minmax(0, 360px) minmax(0, 1fr) minmax(0, 390px);
+    gap: clamp(18px, 2.6vw, 40px);
+}
+
+.cover__title {
+    font-size: clamp(1.85rem, 2.9vw, 2.9rem);
+}
+
+.cover__art img {
+    width: min(100%, 620px);
+}
+
+.cover__panel--info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: clamp(18px, 2vw, 26px);
+}
+
+.cover__panel--info .cover__kicker {
+    margin-bottom: 2px;
+}
+
+/* оглавление живёт внутри правой панели: убираем у него собственный оклад */
+.cover__panel--info .cover__toc {
+    margin-top: 4px;
+    padding: 14px 0 0;
+    border: 0;
+    border-top: 1px solid rgba(184, 184, 255, 0.12);
+    border-radius: 0;
+    background: none;
+}
+
+@media screen and (max-width: 1180px) and (min-width: 861px) {
+    .cover__stage { grid-template-columns: minmax(0, 340px) minmax(0, 1fr); }
+    .cover__panel--info { grid-column: 1 / -1; }
+    .cover__panel--info .cover__toc {
+        margin-top: 6px;
+        padding-top: 12px;
+    }
+}
+
+
+
+/* подпись разделов в узкой левой панели должна влезать в строку */
+.cover__eyebrow {
+    font-size: 0.6rem;
+    letter-spacing: 0.12em;
+}
+
+
+
+
+
+/* Тест: фотолуна вместо мягкой */
+
+/* Луна: подкрашиваем в лаванду и приглушаем, центрируем по фигуре */
+
+/* ====== ФИНАЛЬНЫЕ ПРАВИЛА РАСКЛАДКИ ОБЛОЖКИ (перекрывают всё выше) ====== */
+@media screen and (max-width: 1400px) {
+    .cover__stage {
+        grid-template-columns: minmax(0, 330px) minmax(0, 1fr) minmax(0, 330px);
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .cover__stage {
+        grid-template-columns: minmax(0, 320px) minmax(0, 1fr);
+    }
+    .cover__panel--info {
+        grid-column: 1 / -1;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .cover__stage {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .cover__panel--info {
+        grid-column: auto;
+    }
+}
+
+
+/* ====== НЕБО: фон с луной + облака (под частицами) ====== */
+.sky {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+    background:
+        linear-gradient(180deg,
+            rgba(13, 9, 20, 0.10) 0%,
+            rgba(13, 9, 20, 0.45) 48%,
+            rgba(13, 9, 20, 0.97) 94%),
+        url('../img/bg2.jpg') center top / cover no-repeat;
+}
+
+
+
+
+
+@media (prefers-reduced-motion: reduce) {
+}
+
+@media screen and (max-width: 860px) {
+    .sky {
+        background-position: 50% 12%;
+    }
+}
+
+/* ====== ОБЛАКА ПОВЕРХ КОНТЕНТА (под точками навигации) ====== */
+.clouds {
+    position: fixed;
+    inset: 0;
+    z-index: 20;                 /* выше контейнера (10) и обложки, ниже .scroll-nav (100) */
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.clouds__layer {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    mix-blend-mode: screen;
+    opacity: 0;
+    will-change: transform, opacity;
+}
+
+/* нижнее левое облако */
+.clouds__layer--far {
+    background-image: url('../img/pngwing.com%20(8).png');
+    background-size: 52% auto;
+    background-position: left bottom;
+    animation: clouds-from-left 11s cubic-bezier(0.3, 0.1, 0.25, 1) 0.1s forwards;
+}
+
+/* правое облако на уровне середины обложки */
+.clouds__layer--near {
+    background-image: url('../img/pngwing.com%20(10).png');
+    background-size: 34% auto;
+    background-position: right 56%;
+    animation: clouds-from-right 9s cubic-bezier(0.3, 0.1, 0.25, 1) 0.45s forwards;
+}
+
+@keyframes clouds-from-left {
+    0%   { transform: translate3d(-100%, 0, 0); opacity: 0; }
+    12%  { opacity: 0.30; }
+    100% { transform: translate3d(0, 0, 0); opacity: 0.30; }
+}
+
+@keyframes clouds-from-right {
+    0%   { transform: translate3d(100%, 0, 0); opacity: 0; }
+    12%  { opacity: 0.26; }
+    100% { transform: translate3d(0, 0, 0); opacity: 0.34; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .clouds__layer { animation: none; transform: none; }
+    .clouds__layer--far { opacity: 0.16; }
+    .clouds__layer--near { opacity: 0.13; }
+}
+
+@media screen and (max-width: 860px) {
+    .clouds__layer--far {
+        background-size: 92% auto;
+        background-position: left calc(100% + 1vh);
+    }
+    .clouds__layer--near {
+        background-size: 62% auto;
+        background-position: right 62%;
+    }
+}
+
+/* Положение облаков: нижнее-левое и правое, как в макете */
+.clouds__layer--far {
+    background-size: 46% auto;
+    background-position: -4% 74%;
+}
+
+.clouds__layer--near {
+    background-size: 32% auto;
+    background-position: 104% 56%;
+}
+
+@media screen and (max-width: 860px) {
+    .clouds__layer--far {
+        background-size: 96% auto;
+        background-position: -10% 68%;
+    }
+    .clouds__layer--near {
+        background-size: 66% auto;
+        background-position: 112% 52%;
+    }
+}
+
+
+/* --- polish.css --- */
+/* ====== ПРАВКИ ПО МАКЕТУ: скругления, кнопки, заголовок, ширина ====== */
+
+/* 1. Скругления панелей и аккордеонов */
+.cover__panel {
+    border-radius: 18px;
+}
+.cover__acc {
+    border-radius: 12px;
+}
+.cover__acc summary {
+    border-radius: 12px;
+}
+
+/* 2. Меню — настоящие кнопки, крупнее */
+.nav-menu--tabs {
+    justify-content: center;
+    gap: 12px;
+    margin: clamp(24px, 3vw, 38px) 0 clamp(10px, 1.6vw, 18px);
+    border-bottom: 0;
+}
+.nav-menu--tabs .btn {
+    padding: 15px 28px;
+    border-radius: 13px;
+    border: 1px solid rgba(184, 184, 255, 0.28);
+    background: linear-gradient(180deg, rgba(42, 32, 70, 0.78), rgba(20, 14, 34, 0.78));
+    box-shadow: 0 8px 22px -14px rgba(0, 0, 0, 0.9), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    color: #cfcaf5;
+    font-size: 0.86rem;
+    letter-spacing: 0.11em;
+    transition: all 0.25s ease;
+}
+.nav-menu--tabs .btn::after {
+    display: none;
+}
+.nav-menu--tabs .btn:hover {
+    border-color: rgba(232, 195, 150, 0.55);
+    background: linear-gradient(180deg, rgba(232, 195, 150, 0.18), rgba(232, 195, 150, 0.05));
+    color: #f4e2c2;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px -14px rgba(232, 195, 150, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    text-shadow: none;
+}
+.nav-menu--tabs .btn:active {
+    transform: translateY(0);
+}
+
+/* 3. Заголовок-бренд: золотой перелив + эфирное свечение */
+.cover__title {
+    font-size: clamp(2rem, 3.5vw, 3.3rem);
+    letter-spacing: 0.02em;
+    color: transparent !important;
+    background-image: linear-gradient(100deg,
+        #f6e7cd 0%,
+        #e8c396 20%,
+        #fff8ea 38%,
+        #e8c396 56%,
+        #c9a06a 78%,
+        #f6e7cd 100%);
+    background-size: 260% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+    animation: title-shimmer 12s ease-in-out infinite, title-ether 7s ease-in-out infinite;
+}
+@keyframes title-shimmer {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+@keyframes title-ether {
+    0%, 100% { filter: drop-shadow(0 0 16px rgba(232, 195, 150, 0.28)) drop-shadow(0 0 30px rgba(184, 184, 255, 0.12)); }
+    50%      { filter: drop-shadow(0 0 26px rgba(232, 195, 150, 0.45)) drop-shadow(0 0 44px rgba(184, 184, 255, 0.28)); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .cover__title { animation: none; }
+}
+
+/* 4. Шире контент: секции дышат, карточки встают по три */
+.container {
+    max-width: 1440px;
+}
+#themes-grid,
+#extensions-grid,
+#lorebooks-grid,
+#bots-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 430px));
+    justify-content: center;
+}
+
+@media screen and (max-width: 860px) {
+    .nav-menu--tabs {
+        gap: 8px;
+        justify-content: center;
+    }
+    .nav-menu--tabs .btn {
+        padding: 11px 14px;
+        font-size: 0.74rem;
+        border-radius: 10px;
+    }
+    .cover__panel { border-radius: 14px; }
+}
+
+
+/* --- fog-cards.css --- */
+/* ====== ТУМАН: наползает на луну при прокрутке ====== */
+.fog {
+    position: fixed;
+    inset: 0;
+    z-index: 0;               /* поверх .sky (тот же уровень, но позже в DOM) */
+    pointer-events: none;
+    opacity: 0;
+    background:
+        radial-gradient(130% 85% at 50% 6%,
+            rgba(52, 38, 92, 0.92) 0%,
+            rgba(30, 20, 51, 0.96) 42%,
+            rgba(15, 10, 26, 0.99) 78%);
+    transition: opacity 0.18s linear;
+    will-change: opacity;
+}
+
+@media screen and (min-width: 861px) {
+    .fog {
+        backdrop-filter: blur(7px);
+        -webkit-backdrop-filter: blur(7px);
+    }
+}
+
+/* ====== КАРТОЧКИ: оформление по макету ====== */
+#themes-grid,
+#extensions-grid,
+#lorebooks-grid,
+#bots-grid {
+    counter-reset: card-no;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    border: 1px solid rgba(184, 184, 255, 0.18);
+    background: linear-gradient(168deg, rgba(40, 30, 64, 0.92), rgba(15, 10, 26, 0.96));
+    padding: 22px 20px 20px;
+    box-shadow: 0 26px 54px -34px rgba(0, 0, 0, 0.95), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* золотая линия по верхнему краю — как на панелях обложки */
+.card::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(232, 195, 150, 0.5), transparent);
+    opacity: 0.55;
+    pointer-events: none;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(232, 195, 150, 0.42);
+    box-shadow:
+        0 34px 64px -34px rgba(0, 0, 0, 0.95),
+        0 0 34px -20px rgba(232, 195, 150, 0.55),
+        inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+
+.card img {
+    border-radius: 14px;
+    border-color: rgba(184, 184, 255, 0.22);
+}
+
+/* номер карточки: NO. 01, NO. 02 ... */
+#themes-grid > .card::before,
+#extensions-grid > .card::before,
+#lorebooks-grid > .card::before,
+#bots-grid > .card::before {
+    counter-increment: card-no;
+    content: "NO. 0" counter(card-no);
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    z-index: 3;
+    padding: 4px 8px;
+    border-radius: 7px;
+    background: rgba(13, 9, 20, 0.82);
+    border: 1px solid rgba(184, 184, 255, 0.28);
+    color: #cfcaf5;
+    font-family: 'Cinzel', serif;
+    font-size: 0.56rem;
+    letter-spacing: 0.14em;
+    pointer-events: none;
+}
+
+@media screen and (max-width: 860px) {
+    .card {
+        border-radius: 16px;
+        padding: 18px 16px 16px;
+    }
+    .card::before {
+        top: 10px;
+        left: 10px;
+        font-size: 0.5rem;
+    }
+}
+
+
+/* --- cards-flow.css --- */
+/* ====== Структура карточек: контент сверху, кнопки снизу ====== */
+.card {
+    justify-content: flex-start;
+    text-align: left;
+}
+
+/* заголовок и текст держим вместе, теги и кнопки прижимаем к низу */
+.theme-tags,
+.bot-tags,
+.ext-tags {
+    margin-top: auto;
+    justify-content: flex-start;
+}
+
+.theme-actions,
+.ext-actions,
+.theme-card > .btn,
+.ext-card > .btn {
+    margin-top: 10px;
+}
+
+/* превью темы: одинаковое соотношение сторон, обрезка по центру */
+#themes-grid .card > img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 14px;
+    margin-bottom: 14px;
+}
+
+#themes-grid .card .theme-gallery {
+    margin-bottom: 14px;
+}
+
+#themes-grid .card .theme-gallery .swiper-slide img {
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
+
+.card h3,
+.theme-card h3,
+.ext-card h3 {
+    text-align: left;
+    margin-bottom: 8px;
+}
+
+.card p,
+.theme-card > p,
+.ext-card > p {
+    text-align: left;
+}
+
+/* описания разной длины не разъезжаются: три строки максимум */
+#themes-grid .card > p,
+#extensions-grid .card > p,
+#lorebooks-grid .card > p {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
+/* --- cards-start.css --- */
+/* Карточки не растягиваются под самую высокую в ряду — высота по содержимому */
+#themes-grid,
+#extensions-grid,
+#lorebooks-grid,
+#bots-grid {
+    align-items: start;
+}
+
+.theme-tags,
+.bot-tags,
+.ext-tags {
+    margin-top: 14px;
+}
+
+/* у темы без скриншота — компактнее */
+.card .theme-emblem {
+    margin-top: 4px;
+}
+
+
+/* --- cards-mockup.css --- */
+/* ====== КАРТОЧКИ ПО МАКЕТУ ====== */
+
+#themes-grid,
+#extensions-grid,
+#lorebooks-grid,
+#bots-grid {
+    gap: 22px;
+}
+
+.card {
+    position: relative;
+    border-radius: 16px;
+    border: 1px solid rgba(184, 184, 255, 0.16);
+    background: rgba(18, 12, 30, 0.55);
+    padding: 16px 16px 18px;
+    box-shadow: 0 18px 40px -28px rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    border-color: rgba(232, 195, 150, 0.38);
+    transform: translateY(-4px);
+    box-shadow: 0 26px 50px -30px rgba(0, 0, 0, 0.95), 0 0 28px -20px rgba(232, 195, 150, 0.5);
+}
+
+/* номер: мелкий, разреженный, в правом верхнем углу картинки */
+#themes-grid > .card::before,
+#extensions-grid > .card::before,
+#lorebooks-grid > .card::before,
+#bots-grid > .card::before {
+    content: "NO. 0" counter(card-no);
+    position: absolute;
+    top: 26px;
+    right: 27px;
+    left: auto;
+    z-index: 4;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: rgba(196, 190, 240, 0.55);
+    font-family: 'Cinzel', serif;
+    font-size: 0.52rem;
+    letter-spacing: 0.2em;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.9);
+    pointer-events: none;
+}
+
+/* золотая линия сверху больше не нужна: карточка держится рамкой */
+.card::after {
+    display: none;
+}
+
+/* картинка в собственной рамке, с отступом от края карточки */
+#themes-grid .card > img,
+#extensions-grid .card > img,
+#lorebooks-grid .card > img,
+#bots-grid .card > img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: center top;
+    margin: 0 0 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(184, 184, 255, 0.16);
+    box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.55);
+    background: rgba(10, 7, 18, 0.9);
+}
+
+#themes-grid .card .theme-gallery {
+    margin-bottom: 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(184, 184, 255, 0.16);
+    overflow: hidden;
+}
+
+#themes-grid .card .theme-gallery .swiper-slide img {
+    border: 0;
+    border-radius: 0;
+    margin: 0;
+}
+
+/* если есть превью — эмодзи-герб не нужен */
+.card:has(> img) .theme-emblem,
+.card:has(.theme-gallery) .theme-emblem {
+    display: none;
+}
+
+/* название */
+.card h3,
+.theme-card h3,
+.ext-card h3 {
+    margin: 0 0 10px;
+    font-size: 1.02rem;
+    letter-spacing: 0.05em;
+    text-align: left;
+}
+
+/* описание */
+.card p,
+.theme-card > p,
+.ext-card > p {
+    margin: 0 0 12px;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: #b3aed8;
+    text-align: left;
+}
+
+/* теги — пилюлями внизу */
+.theme-tags,
+.bot-tags,
+.ext-tags {
+    justify-content: flex-start;
+    gap: 6px;
+    margin: 0 0 14px;
+}
+
+.theme-tags .tag,
+.ext-tags .tag,
+.bot-tags .tag {
+    padding: 3px 10px;
+    font-size: 0.62rem;
+    letter-spacing: 0.08em;
+    background: rgba(184, 184, 255, 0.1);
+    border-color: rgba(184, 184, 255, 0.3);
+    color: #c3bdf0;
+}
+
+/* кнопки — на всю ширину, компактные */
+.theme-actions,
+.ext-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.theme-actions .btn,
+.ext-actions .btn,
+.theme-card > .btn,
+.ext-card > .btn {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 0.76rem;
+    border-radius: 10px;
+}
+
+/* эмблема у карточек без превью — скромнее */
+.theme-emblem {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 860px) {
+    .card {
+        border-radius: 14px;
+        padding: 13px 13px 15px;
+    }
+    .card::before {
+        top: 21px;
+        right: 22px;
+        font-size: 0.48rem;
+    }
+    #themes-grid .card > img {
+        margin-bottom: 12px;
+    }
+}
+
+
+/* --- cards-ext.css --- */
+/* Карточки расширений/лорбуков/ботов — по содержимому, без пустот */
+#extensions-grid .card,
+#lorebooks-grid .card,
+#bots-grid .card {
+    min-height: 0;
+}
+
+/* теги под текстом, кнопки под ними — как в темах */
+.ext-card .ext-tags {
+    order: 1;
+    margin-bottom: 10px;
+}
+.ext-card .ext-actions {
+    order: 2;
+    margin-top: 0;
+}
+.ext-card .theme-note {
+    order: 0;
+}
+
+.theme-actions,
+.ext-actions {
+    margin-top: 0;
+}
+
+
+/* --- cards-ext2.css --- */
+/* Кнопки в карточках расширений — класс .ext-links, а не .ext-actions */
+.ext-card .ext-links {
+    order: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+}
+
+.ext-card .ext-links .btn {
+    flex: 1 1 120px;
+    width: auto;
+    padding: 10px 14px;
+    font-size: 0.76rem;
+    border-radius: 10px;
+}
+
+.ext-card .ext-tags {
+    order: 1;
+    margin: 0 0 10px;
+}
+
+
+/* --- rule.css --- */
+/* ====== РАЗДЕЛИТЕЛЬ между меню и контентом ====== */
+.rule {
+    position: relative;
+    height: 1px;
+    margin: 6px auto clamp(30px, 4vw, 52px);
+    width: 100%;
+    background: linear-gradient(90deg,
+        transparent 0%,
+        rgba(184, 184, 255, 0.22) 14%,
+        rgba(232, 195, 150, 0.42) 44%,
+        transparent 47.5%,
+        transparent 52.5%,
+        rgba(232, 195, 150, 0.42) 56%,
+        rgba(184, 184, 255, 0.22) 86%,
+        transparent 100%);
+}
+
+.rule > span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #e8c396;
+    font-size: 0.72rem;
+    line-height: 1;
+    text-shadow: 0 0 14px rgba(232, 195, 150, 0.65), 0 0 30px rgba(184, 184, 255, 0.3);
+}
+
+@media screen and (max-width: 860px) {
+    .rule {
+        margin: 4px auto 26px;
+        background: linear-gradient(90deg,
+            transparent 0%,
+            rgba(184, 184, 255, 0.2) 18%,
+            rgba(232, 195, 150, 0.35) 43%,
+            transparent 47%,
+            transparent 53%,
+            rgba(232, 195, 150, 0.35) 57%,
+            rgba(184, 184, 255, 0.2) 82%,
+            transparent 100%);
+    }
+}
+
+
+/* --- art-bigger.css --- */
+/* Крупнее фигура в центре: чуть шире контейнер, чуть уже боковые панели */
+.container {
+    max-width: 1500px;
+}
+
+.cover__stage {
+    grid-template-columns: minmax(0, 330px) minmax(0, 1fr) minmax(0, 350px);
+}
+
+.cover__art img {
+    width: min(100%, 700px);
+}
+
+@media screen and (max-width: 1400px) {
+    .cover__stage {
+        grid-template-columns: minmax(0, 320px) minmax(0, 1fr) minmax(0, 330px);
+    }
+    .cover__art img {
+        width: min(100%, 640px);
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .cover__art img {
+        width: min(100%, 620px);
+    }
+}
+
+
+/* --- финальные положения облаков --- */
+.clouds__layer--far {
+    background-size: 46% auto;
+    background-position: -46% 76%;
+}
+
+.clouds__layer--near {
+    background-size: 32% auto;
+    background-position: 104% 66%;
+}
+
+@media screen and (max-width: 860px) {
+    .clouds__layer--far {
+        background-size: 96% auto;
+        background-position: -52% 70%;
+    }
+    .clouds__layer--near {
+        background-size: 66% auto;
+        background-position: 112% 60%;
+    }
+}
+
+
+/* --- фикс: обложке и меню больше не нужен выход за контейнер --- */
+.cover,
+.nav-menu--tabs {
+    width: 100%;
+    margin-left: 0;
+    transform: none;
+}
+
+/* ====== ФИНАЛЬНАЯ АДАПТИВНОСТЬ ОБЛОЖКИ ====== */
+
+@media screen and (max-width: 1300px) {
+    .cover__stage {
+        grid-template-columns: minmax(0, 320px) minmax(0, 1fr);
+    }
+    .cover__panel--info {
+        grid-column: 1 / -1;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .scroll-nav { display: none; }
+}
+
+@media screen and (max-width: 860px) {
+    .cover,
+    .nav-menu--tabs {
+        width: 100%;
+        margin-left: 0;
+        transform: none;
+    }
+    .cover__stage {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .cover__panel--info {
+        grid-column: auto;
+    }
+    .cover__art {
+        order: -1;
+    }
+    .cover__art img {
+        width: min(100%, 380px);
+    }
+    .cover__panel {
+        border-radius: 14px;
+        padding: 20px 16px;
+    }
+    .cover__archive {
+        display: none;
+    }
+    .cover__intro {
+        max-width: none;
+    }
+    .cover__title {
+        font-size: clamp(1.9rem, 8vw, 2.6rem);
+    }
+    .nav-menu--tabs {
+        flex-wrap: wrap;
+        justify-content: center;
+        border-bottom: 0;
+    }
+    .nav-menu--tabs .btn {
+        padding: 11px 14px;
+        font-size: 0.74rem;
+        border-radius: 10px;
+    }
+    .cover__toc {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .cover__toc-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 18px;
+        width: 100%;
+    }
+    .cover__toc-updated {
+        margin: 0;
+    }
+}
+
+/* Облака: крупнее и заметнее, правое — ниже, левое — за краем */
+.clouds__layer {
+    filter: brightness(1.25);
+}
+
+.clouds__layer--far {
+    background-size: 52% auto;
+    background-position: -48% 78%;
+}
+
+.clouds__layer--near {
+    background-size: 44% auto;
+    background-position: 96% 68%;
+}
+
+@media screen and (max-width: 860px) {
+    .clouds__layer--far {
+        background-size: 110% auto;
+        background-position: -60% 72%;
+    }
+    .clouds__layer--near {
+        background-size: 80% auto;
+        background-position: 104% 64%;
+    }
+}
+
+/* ====== ЗАГОЛОВКИ СЕКЦИЙ: слева, золотом, с линией ====== */
+#themes > h2,
+#extensions > h2,
+#lorebooks > h2,
+#bots > h2 {
+    text-align: left !important;
+    margin: 0 0 8px !important;
+    font-size: clamp(1.7rem, 2.6vw, 2.3rem) !important;
+    letter-spacing: 0.05em !important;
+    color: #e8c396 !important;
+    text-shadow: 0 0 24px rgba(232, 195, 150, 0.38), 0 0 60px rgba(184, 184, 255, 0.15) !important;
+}
+
+#themes > p,
+#extensions > p,
+#lorebooks > p,
+#bots > p {
+    text-align: left !important;
+    margin: 0 0 22px !important;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(184, 184, 255, 0.14);
+    color: #a9a3d8 !important;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    max-width: 62ch;
+}
+
+/* ====== ДЕКОР КАРТОЧЕК: искра в левом верхнем углу, как в макете ====== */
+#themes-grid > .card::after,
+#extensions-grid > .card::after,
+#lorebooks-grid > .card::after,
+#bots-grid > .card::after {
+    content: "✦";
+    display: block;
+    position: absolute;
+    top: 18px;
+    left: 22px;
+    z-index: 4;
+    color: rgba(232, 195, 150, 0.9);
+    font-size: 0.72rem;
+    line-height: 1;
+    text-shadow: 0 0 12px rgba(232, 195, 150, 0.75), 0 0 26px rgba(232, 195, 150, 0.35);
+    pointer-events: none;
+}
+
+/* номер в макете — строчными, с точкой */
+#themes-grid > .card::before,
+#extensions-grid > .card::before,
+#lorebooks-grid > .card::before,
+#bots-grid > .card::before {
+    content: "no. 0" counter(card-no);
+    font-size: 0.56rem;
+    letter-spacing: 0.16em;
+    color: rgba(200, 194, 240, 0.6);
+}
+
+/* рамка вокруг превью — чуть заметнее, с внутренним свечением */
+#themes-grid .card > img,
+#extensions-grid .card > img,
+#lorebooks-grid .card > img,
+#bots-grid .card > img {
+    border: 1px solid rgba(196, 190, 245, 0.22);
+    box-shadow: inset 0 0 70px rgba(0, 0, 0, 0.6), 0 10px 26px -18px rgba(0, 0, 0, 0.9);
+}
+
+@media screen and (max-width: 860px) {
+    #themes > h2,
+    #extensions > h2,
+    #lorebooks > h2,
+    #bots > h2 {
+        font-size: clamp(1.5rem, 6vw, 1.9rem) !important;
+    }
+    #themes > p,
+    #extensions > p,
+    #lorebooks > p,
+    #bots > p {
+        font-size: 0.86rem;
+        margin-bottom: 18px !important;
+    }
+    #themes-grid > .card::after,
+    #extensions-grid > .card::after,
+    #lorebooks-grid > .card::after,
+    #bots-grid > .card::after {
+        top: 14px;
+        left: 16px;
+        font-size: 0.62rem;
+    }
+}
+
+/* Линия под заголовком — на всю ширину, как в макете */
+#themes > p,
+#extensions > p,
+#lorebooks > p,
+#bots > p {
+    max-width: none !important;
+    margin-bottom: 26px !important;
+}
+
+#themes > h2,
+#extensions > h2,
+#lorebooks > h2,
+#bots > h2 {
+    font-size: clamp(1.9rem, 2.9vw, 2.6rem) !important;
+}
+
+/* 1. Убираем пустую полосу над галереей скриншотов */
+#themes-grid .card .theme-gallery {
+    margin-top: 0 !important;
+}
+
+/* 2. Убираем эмодзи из заголовков разделов (в меню остаются) */
+#themes > h2 > span[aria-hidden="true"],
+#extensions > h2 > span[aria-hidden="true"],
+#lorebooks > h2 > span[aria-hidden="true"],
+#bots > h2 > span[aria-hidden="true"] {
+    display: none !important;
+}
+
+/* 3. Больше воздуха между разделами */
+#themes,
+#extensions,
+#lorebooks,
+#bots {
+    margin-top: clamp(80px, 9vw, 130px) !important;
+    position: relative;
+    scroll-margin-top: 30px;
+}
+
+/* декоративный разделитель в этом воздухе */
+#extensions::before,
+#lorebooks::before,
+#bots::before {
+    content: "✦";
+    display: block;
+    margin: 0 auto clamp(34px, 4vw, 56px);
+    width: 100%;
+    text-align: center;
+    color: rgba(232, 195, 150, 0.45);
+    font-size: 0.85rem;
+    line-height: 1;
+    text-shadow: 0 0 18px rgba(232, 195, 150, 0.5);
+    pointer-events: none;
+}
+
+/* 4. Полоску под подзаголовком убираем, оставляем воздух */
+#themes > p,
+#extensions > p,
+#lorebooks > p,
+#bots > p {
+    border-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    margin-bottom: clamp(40px, 4.5vw, 58px) !important;
+}
+
+@media screen and (max-width: 860px) {
+    #themes,
+    #extensions,
+    #lorebooks,
+    #bots {
+        margin-top: 72px !important;
+    }
+    #extensions::before,
+    #lorebooks::before,
+    #bots::before {
+        margin-bottom: 30px;
+    }
+    #themes > p,
+    #extensions > p,
+    #lorebooks > p,
+    #bots > p {
+        margin-bottom: 30px !important;
+    }
+}
+
+
+/* Заголовки разделов — обычное начертание вместо жирного */
+#themes > h2,
+#extensions > h2,
+#lorebooks > h2,
+#bots > h2 {
+    font-weight: 400 !important;
+    letter-spacing: 0.08em !important;
+}
