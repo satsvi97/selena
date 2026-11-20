@@ -59,7 +59,13 @@ const I18N = {
     "ext.new.desc": "Есть идея? Напиши мне.",
 
     "bots.title": "Мои Боты",
-    "bots.subtitle": "Персонажи для SillyTavern. Пока пусто — наполняю по мере готовности.",
+    "bots.subtitle": "Персонажи, с которыми можно поговорить. Пока один — но он внимательный.",
+    "bot.kian.name": "Kian | Твой психотерапевт — твой сталкер",
+    "bot.kian.desc": "Психотерапевт, который знает о тебе больше, чем ты сам. Паника, бессонница и ощущение, что за тобой смотрят, — это не паранойя.",
+    "btn.openBot": "Открыть бота",
+    "tag.limitless": "Безлимитно",
+    "tag.male": "Мужчина",
+    "tag.dominant": "Доминант",
     "bots.soon.title": "Скоро...",
     "bots.soon.desc": "Новые персонажи появятся здесь.",
 
@@ -170,7 +176,13 @@ const I18N = {
     "ext.new.desc": "Got an idea? Tell me.",
 
     "bots.title": "My Bots",
-    "bots.subtitle": "SillyTavern characters. Empty for now — I'll add them as they're ready.",
+    "bots.subtitle": "Characters you can talk to. Only one so far — but he pays attention.",
+    "bot.kian.name": "Kian | Your Therapist Is Your Stalker",
+    "bot.kian.desc": "A therapist who knows you better than you know yourself. The panic, the insomnia, the feeling of being watched — it is not paranoia.",
+    "btn.openBot": "Open bot",
+    "tag.limitless": "Limitless",
+    "tag.male": "Male",
+    "tag.dominant": "Dominant",
     "bots.soon.title": "Coming soon...",
     "bots.soon.desc": "New characters will appear here.",
 
@@ -281,7 +293,13 @@ const I18N = {
     "ext.new.desc": "Є ідея? Напиши мені.",
 
     "bots.title": "Мої Боти",
-    "bots.subtitle": "Персонажі для SillyTavern. Поки порожньо — додаю в міру готовності.",
+    "bots.subtitle": "Персонажі, з якими можна поговорити. Поки один — але він уважний.",
+    "bot.kian.name": "Kian | Твій психотерапевт — твій сталкер",
+    "bot.kian.desc": "Психотерапевт, який знає про тебе більше, ніж ти сам. Паніка, безсоння і відчуття, що за тобою стежать, — це не паранойя.",
+    "btn.openBot": "Відкрити бота",
+    "tag.limitless": "Безлімітно",
+    "tag.male": "Чоловік",
+    "tag.dominant": "Домінант",
     "bots.soon.title": "Скоро...",
     "bots.soon.desc": "Нові персонажі з'являться тут.",
 
@@ -392,7 +410,13 @@ const I18N = {
     "ext.new.desc": "Har du en idé? Skriv till mig.",
 
     "bots.title": "Mina Botar",
-    "bots.subtitle": "SillyTavern-karaktärer. Tomt just nu — jag fyller på när de är klara.",
+    "bots.subtitle": "Karaktärer du kan prata med. Bara en än så länge — men han är uppmärksam.",
+    "bot.kian.name": "Kian | Din terapeut är din stalker",
+    "bot.kian.desc": "En terapeut som vet mer om dig än du själv. Paniken, sömnlösheten, känslan av att vara iakttagen — det är inte paranoia.",
+    "btn.openBot": "Öppna boten",
+    "tag.limitless": "Obegränsat",
+    "tag.male": "Man",
+    "tag.dominant": "Dominant",
     "bots.soon.title": "Kommer snart...",
     "bots.soon.desc": "Nya karaktärer dyker upp här.",
 
